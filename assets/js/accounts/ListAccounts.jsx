@@ -4,33 +4,24 @@ class ListAccounts extends Component {
         accounts : []
     }
 
-    // componentDidMount() {
-    //     this.loadAccounts();
-    // }
 
+    httpRequest = async ( request , data) => {
 
-    // httpRequest = async ( request , data) => {
+        let urlencoded = new  FormData() ;
+        urlencoded.append( 'request' , request );
+        Object.keys( data ).map( item => urlencoded.append( item , data[item] ) )
 
-    //     let urlencoded = new  FormData() ;
+        const rawResponse = await fetch('/backend', {
+            method: 'POST',
+            body: urlencoded
+        });
 
-    //     urlencoded.append( 'request' , request );
+        const response = await rawResponse.json();
+        return response;
 
-    //     Object.keys( data ).map( item => urlencoded.append( item , data[item] ) )
-
-    //     const rawResponse = await fetch('/backend', {
-    //         method: 'POST',
-    //         body: urlencoded
-    //     });
-
-    //     const response = await rawResponse.json();
-
-    //     return response;
-
-    // }
+    }
 
     render() {
-
-        // this.loadAccounts();
         // class="container-fluid"
         return ( <div className="mx-5" >
 
@@ -39,7 +30,6 @@ class ListAccounts extends Component {
             <table className="table table-warning table-hover">
                 <thead>
                     <tr>
-                        {/* <th scope="col">#</th> */}
                         <th scope="col">Name</th>
                         <th scope="col">Access key</th>
                         <th scope="col">Secret key</th>
@@ -66,19 +56,11 @@ class ListAccounts extends Component {
     }
 
 
-    loadAccounts = async _ => {
-        const response = await this.httpRequest( 'list_accounts' , {}); 
-        this.setState({ accounts : response.data });
-        if( response.status != true ){
-            toastr.error( { title:  response.message  , message: response.error , duration : 7000 });
-        }
-    } 
-
     deleteAccount = async accountId => {
 
         const response = await this.httpRequest( 'delete_account' , { accountId });
         if( response.status == true ){
-            this.loadAccounts();
+            this.props.onAccountSaved();
             toastr.notice({ title:  response.message  , message: response.message , duration : 7000 });
         } else {
             toastr.error( { title:  response.message  , message: response.error , duration : 7000 });
@@ -87,7 +69,6 @@ class ListAccounts extends Component {
     }
     
     editAccount = account => {
-
         this.props.onAccountEdit( account )
     } 
 

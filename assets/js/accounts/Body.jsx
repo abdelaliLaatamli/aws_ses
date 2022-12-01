@@ -13,9 +13,7 @@ class Body extends Component {
     httpRequest = async ( request , data) => {
 
         let urlencoded = new  FormData() ;
-
         urlencoded.append( 'request' , request );
-
         Object.keys( data ).map( item => urlencoded.append( item , data[item] ) )
 
         const rawResponse = await fetch('/backend', {
@@ -24,7 +22,6 @@ class Body extends Component {
         });
 
         const response = await rawResponse.json();
-
         return response;
 
     }
@@ -42,14 +39,11 @@ class Body extends Component {
             <div>
                 <h3 class="text-center mt-5"> Accounts Management </h3>
                 <FormAccounts editableAccount={ this.state.editableAccount } onAccountSaved={ this.loadAccounts } />
-                <ListAccounts accounts={this.state.accounts} onAccountEdit={ this.accountEdit }/>
+                <ListAccounts accounts={this.state.accounts} onAccountEdit={ this.accountEdit } onAccountSaved={ this.loadAccounts } />
             </div>
         )
     }
 
     accountEdit = editableAccount => this.setState({ editableAccount  }) 
-    // submitAccounts = (data) => {
-    //     console.log( data )
-    // }
 
 }
