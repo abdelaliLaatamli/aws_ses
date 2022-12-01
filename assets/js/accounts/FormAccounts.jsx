@@ -37,7 +37,7 @@ class FormAccounts extends Component {
 
         Object.keys( data ).map( item => urlencoded.append( item , data[item] ? data[item].trim() : "" ) )
 
-        const rawResponse = await fetch('/backend', {
+        const rawResponse = await fetch( backend , {
             method: 'POST',
             body: urlencoded
         });

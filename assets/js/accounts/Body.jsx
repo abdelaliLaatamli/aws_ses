@@ -16,7 +16,7 @@ class Body extends Component {
         urlencoded.append( 'request' , request );
         Object.keys( data ).map( item => urlencoded.append( item , data[item] ) )
 
-        const rawResponse = await fetch('/backend', {
+        const rawResponse = await fetch( backend , {
             method: 'POST',
             body: urlencoded
         });
@@ -38,8 +38,14 @@ class Body extends Component {
         return (
             <div>
                 <h3 class="text-center mt-5"> Accounts Management </h3>
-                <FormAccounts editableAccount={ this.state.editableAccount } onAccountSaved={ this.loadAccounts } />
-                <ListAccounts accounts={this.state.accounts} onAccountEdit={ this.accountEdit } onAccountSaved={ this.loadAccounts } />
+                <FormAccounts 
+                    editableAccount={ this.state.editableAccount } 
+                    onAccountSaved={ this.loadAccounts } 
+                    />
+                <ListAccounts 
+                    accounts={this.state.accounts} 
+                    onAccountEdit={ this.accountEdit } 
+                    onAccountSaved={ this.loadAccounts } />
             </div>
         )
     }

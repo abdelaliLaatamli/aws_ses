@@ -24,7 +24,11 @@ switch( uri() ) {
         include __PWDROOT__."/views/accouts.inc.php" ;
         break;
 
-    case 'backend':
+    case 'backend/accounts':
+        include __PWDROOT__."/controllers/accounts.inc.php";
+        break;
+
+    case 'backend/services':
         include __PWDROOT__."/controllers/endpoint.inc.php";
         break;
 

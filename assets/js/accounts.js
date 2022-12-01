@@ -1,6 +1,7 @@
 const { Component } = React ;
 const toastr = $.growl;
 const $ = window.$ 
+const backend = "/backend/accounts"
 
 class App extends Component {
 

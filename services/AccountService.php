@@ -45,8 +45,20 @@ class AccountService {
     }
 
 
-    public function getAccount(){
-
+    public function getAccount( $accountId ){
+        $statement = $this->dbConnection->prepare("
+            SELECT 
+                id , name , access_key , secret_key , proxy 
+            FROM 
+                accounts 
+            WHERE 
+            id = ? and status = 1 "
+        );
+        $statement->execute([ $accountId ]);
+    
+        // set the resulting array to associative
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        return $statement->fetch();
     }
 
     public function addAccount( $account_name , $access_key , $secret_key , $proxy ){
@@ -60,18 +72,6 @@ class AccountService {
 
 
     public function updateAccount( $account_id , $account_name , $access_key , $secret_key , $proxy ){
-
-        // $account_id , $account_name , $access_key , $secret_key , $proxy
-        // UPDATE `accounts` SET
-        // `id` = '1',
-        // `name` = 'aaa',
-        // `access_key` = 'aaa',
-        // `secret_key` = 'aaa',
-        // `proxy` = 'aaa',
-        // `status` = '1',
-        // `created_at` = '2022-12-01 08:29:41'
-        // WHERE `id` = '1';
-
 
         $statement = $this->dbConnection->prepare("
             UPDATE accounts SET

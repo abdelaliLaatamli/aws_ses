@@ -11,7 +11,7 @@ class ListAccounts extends Component {
         urlencoded.append( 'request' , request );
         Object.keys( data ).map( item => urlencoded.append( item , data[item] ) )
 
-        const rawResponse = await fetch('/backend', {
+        const rawResponse = await fetch( backend , {
             method: 'POST',
             body: urlencoded
         });

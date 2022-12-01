@@ -23,7 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./assets/js/jquery.growl.js"></script>
     <script type="text/babel" src="./assets/js/accounts.js"></script>
-    <script type="text/babel" src="./assets/js/accounts/Navbar.jsx"></script>
+    <script type="text/babel" src="./assets/js/includes/Navbar.jsx"></script>
     <script type="text/babel" src="./assets/js/accounts/Body.jsx"></script>
     <script type="text/babel" src="./assets/js/accounts/ListAccounts.jsx"></script>
     <script type="text/babel" src="./assets/js/accounts/FormAccounts.jsx"></script>
