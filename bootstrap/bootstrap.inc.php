@@ -4,30 +4,31 @@
 // $routes = $_SERVER["PATH_INFO"];
 
 
-function uri(){
+function uri() {
     $uri = $_SERVER["REQUEST_URI"] ;
-    $uri = trim( $uri , "/" ) ;
-    $explodedUri = explode( "?" , $uri );
+    $uri = trim($uri,"/") ;
+    $explodedUri = explode("?",$uri);
     return $explodedUri[0] ;
 }
 
-// var_dump( [ $routes , $_SERVER["REQUEST_URI"] ,  uri() ] ) ;
+define( "__PWDROOT__" , $_SERVER["DOCUMENT_ROOT"] );
 
-// die();
+$configurations = require __PWDROOT__."/bootstrap/db_conf.inc.php";
+
 switch( uri() ) {
     case '' : 
-        require __DIR__."/../views/home.inc.php" ;
+        require __PWDROOT__."/views/home.inc.php" ;
         break;
     
     case 'accounts': 
-        include __DIR__."/../views/accouts.inc.php" ;
+        include __PWDROOT__."/views/accouts.inc.php" ;
         break;
 
     case 'backend':
-        include __DIR__."/../controllers/endpoint.inc.php";
+        include __PWDROOT__."/controllers/endpoint.inc.php";
         break;
 
     default:
-        include __DIR__."/../views/error.inc.php" ;
+        include __PWDROOT__."/views/error.inc.php" ;
         break;
 }

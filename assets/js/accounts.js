@@ -1,6 +1,6 @@
 const { Component } = React ;
-// const toastr = $.growl;
-// const $ = window.$ 
+const toastr = $.growl;
+const $ = window.$ 
 
 class App extends Component {
 
