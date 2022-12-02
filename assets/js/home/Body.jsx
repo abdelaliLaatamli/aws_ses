@@ -48,7 +48,6 @@ class Body extends Component {
 
 
     getDetails = async details => {
-        console.log(details)
         const response = await this.httpRequest( 'get_details' , details );
         console.log( response )
     }

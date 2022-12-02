@@ -18,14 +18,15 @@ if (!empty($_POST) && isset($_POST["request"])) {
             $region = $_POST["region"];
 
             try{
-                $accounts = new AccountService( $configurations["db"] );
-                $account = $accounts->getAccount( $account_id );
+                $accountService = new AccountService( $configurations["db"] );
+                $account = $accountService->getAccount( $account_id );
 
                 $awsSesService = new AwsSesService( $account , $region );
 
                 $response = [ 
                     "status"  => true ,
                     "data"    =>  $awsSesService->getSesDetails() ,
+                    // "data"    =>  $account ,
                     "message" => "details got successfully" ,
                     "error"   => null
                 ];

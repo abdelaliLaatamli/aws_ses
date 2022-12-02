@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ ."/bootstrap/bootstrap.inc.php";
+// require __DIR__ ."/bootstrap/bootstrap.inc.php";
 
 
 
@@ -8,7 +8,7 @@ require __DIR__ ."/bootstrap/bootstrap.inc.php";
 
 
 // require '/path/to/vendor/autoload.php';
-// require __DIR__. '/vendor/autoload.php';
+require __DIR__. '/vendor/autoload.php';
 
 // use Aws\S3\S3Client;
 
