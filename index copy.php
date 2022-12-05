@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ ."/bootstrap/bootstrap.inc.php";
+// require __DIR__ ."/bootstrap/bootstrap.inc.php";
 
 
 
@@ -8,7 +8,7 @@ require __DIR__ ."/bootstrap/bootstrap.inc.php";
 
 
 // require '/path/to/vendor/autoload.php';
-// require __DIR__. '/vendor/autoload.php';
+require __DIR__. '/vendor/autoload.php';
 
 // use Aws\S3\S3Client;
 
@@ -17,11 +17,14 @@ require __DIR__ ."/bootstrap/bootstrap.inc.php";
 //     'version' => 'latest',
 //     'region'  => 'us-west-2'
 // ]);
-$key="AKIAQPO2V3YOVMK4URPW";
-$secret="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";
+// $key="AKIAQPO2V3YOVMK4URPW";
+// $secret="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";
 // 154.13.51.136:5432:awl6q:l14ouq2i 
 
 // awl6q:l14ouq2i@154.13.51.136:5432
+
+$key="AKIATAWNNWVZ5PYFBPOT";
+$secret="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";
 
 $SesClient = new Aws\Ses\SesClient([
     'version' => '2010-12-01',
@@ -31,6 +34,8 @@ $SesClient = new Aws\Ses\SesClient([
         'secret' => $secret,
     ]
 ]);
+
+
 
 
 

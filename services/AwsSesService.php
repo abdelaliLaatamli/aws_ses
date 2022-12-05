@@ -21,29 +21,30 @@ class AwsSesService {
     private function authCredentials(){
 
         // return [ $this->account["access_key"] , $this->account["secret_key"] ] ;
-        // $credentials  = new Credentials( $this->account["access_key"] , $this->account["secret_key"] );
 
-        // $authFactory = [
-        //     'region' => $this->region,
-        //     'version' => '2010-12-01',
-        //     'credentials' => $credentials
-        // ];
+        $credentials  = new Credentials( $this->account["access_key"] , $this->account["secret_key"] );
 
-        // $authFactory["http"] = [
-        //     'proxy' => $this->account["proxy"]
-        // ];
-
-
-        $this->sesClient = new Aws\Ses\SesClient([
+        $authFactory = [
+            'region' => $this->region,
             'version' => '2010-12-01',
-            'region' => 'us-east-1',
-            'credentials' => [
-                'key' => $this->account["access_key"] ,
-                'secret' => $this->account["secret_key"],
-            ]
-        ]);
+            'credentials' => $credentials
+        ];
+        // socks5://
+        $authFactory["http"] = [
+            'proxy' => "https://". $this->account["proxy"]
+        ];
+        // return  $authFactory;
 
-        // $this->sesClient = new SesClient( $authFactory );
+        // $this->sesClient = new Aws\Ses\SesClient([
+        //     'version' => '2010-12-01',
+        //     'region' => 'us-east-1',
+        //     'credentials' => [
+        //         'key' => $this->account["access_key"] ,
+        //         'secret' => $this->account["secret_key"],
+        //     ]
+        // ]);
+
+        $this->sesClient = new SesClient( $authFactory );
 
         // return $authFactory;
 
@@ -72,8 +73,10 @@ class AwsSesService {
 
 
     public function getSesDetails(){
-        $result = $this->sesClient->getSendQuota([ ]);
-        return $result; 
+        // return $this->authCredentials();
+        $result = $this->sesClient->getSendQuota([ ])->toArray();
+        // $result = $this->sesClient->getSendStatistics([])->toArray();//->get("SendDataPoints");
+        return $result ; 
         // $result = $this->sesClient->getSendQuota([ ]);
         // $result = $this->sesClient->getSendStatistics([ ]);
         // return $this->authCredentials();

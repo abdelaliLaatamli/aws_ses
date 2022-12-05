@@ -1,5 +1,5 @@
 <?php 
-
+ini_set('max_execution_time', '45');
 // require_once realpath(__DIR__ . "/vendor/autoload.php");
 // use Dotenv\Dotenv;
 // $dotenv = Dotenv::createImmutable(__DIR__);
