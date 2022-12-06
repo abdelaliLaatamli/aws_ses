@@ -32,13 +32,20 @@ class DetailSection extends Component {
         }
 
 
-        return (<div>
+        return (<div className="pt-4">
+
+                <div className="card mb-3" >
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
         
-            <ul class="nav nav-tabs">   
+            <ul className="nav nav-tabs">   
                 { 
                
                     getSendDataPoints().map(
-                        (quete , key ) => <li class="nav-item">
+                        ( _ , key ) => <li className="nav-item">
                             <button 
                                 className={ checkClass( key + 1 , this.state.sheet)} 
                                 onClick={ () => this.setState({sheet : key + 1 }) } 
@@ -54,7 +61,7 @@ class DetailSection extends Component {
                     <div>No Data available</div>,
                     ...getSendDataPoints().map(
                         (quete , key ) => <div>
-                            
+
                             <p>aaaaa {key}</p>
                             <p>{quete.Bounces}</p>
                             <p>{quete.Complaints}</p>
