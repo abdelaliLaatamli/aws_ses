@@ -1,14 +1,12 @@
 class Body extends Component {
 
 
-    // state = {
-    //     editableAccount : {},
-    //     accounts : []
-    // }
-
-    componentDidMount() {
-        // this.loadAccounts();
+    state = {
+        // editableAccount : {},
+        details : {}
     }
+
+
 
     httpRequest = async ( request , data) => {
 
@@ -40,7 +38,7 @@ class Body extends Component {
                 {/* <h3 class="text-center mt-5"> Accounts Management </h3> */}
 
                 <FormAccountSection onGetDetails={ this.getDetails } />
-                <DetailSection  />
+                <DetailSection details={this.state.details} />
 
             </div>
         )
@@ -49,7 +47,9 @@ class Body extends Component {
 
     getDetails = async details => {
         const response = await this.httpRequest( 'get_details' , details );
-        console.log( response )
+        // console.log( response )
+        this.setState({ details : response.data })
+        // console.log( response.data )
     }
 
     // accountEdit = editableAccount => this.setState({ editableAccount  }) 

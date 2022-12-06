@@ -5,33 +5,65 @@ class DetailSection extends Component {
         sheet : 0
     }
 
+    componentDidUpdate(prevProps) {
+        
+        if(  Object.keys( this.props.details ).length == 0 ){
+            this.setState({sheet:0})
+        }else{
+            if( this.state.sheet == 0 )
+                this.setState({sheet:1})
+        }
+        
+    }
+
     render(){
-        const checkClass=(param , current) => "nav-link" + ( param == current ) ? " active " : ""; 
+
+        const checkClass=(param , current) => {
+            let className = "nav-link" ;
+            let toAdd =  ( param == current ) ? " active " : "";
+            return className + toAdd ;
+        } 
+
+
+        const getSendDataPoints = _ => {
+            const getSendStatistics = this.props.details.getSendStatistics || undefined;
+            const SendDataPoints = (getSendStatistics && getSendStatistics.SendDataPoints ) || []
+            return SendDataPoints;
+        }
+
+
         return (<div>
         
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <button className={checkClass(0 , this.state.sheet)} onClick={ () => this.setState({sheet : 0}) } >Sheet 1</button>
-                </li>
-                <li class="nav-item">
-                    <button className={checkClass(1 , this.state.sheet)} onClick={ () => this.setState({sheet : 1}) } >Sheet 2</button>
-                </li>
-                <li class="nav-item">
-                    <button className={checkClass(2 , this.state.sheet)} onClick={ () => this.setState({sheet : 2}) } >Sheet 3</button>
-                </li>
-                <li class="nav-item">
-                    <button className={checkClass(3 , this.state.sheet)}  onClick={ () => this.setState({sheet : 3}) }>Sheet 4</button>
-                </li>
+            <ul class="nav nav-tabs">   
+                { 
+               
+                    getSendDataPoints().map(
+                        (quete , key ) => <li class="nav-item">
+                            <button 
+                                className={ checkClass( key + 1 , this.state.sheet)} 
+                                onClick={ () => this.setState({sheet : key + 1 }) } 
+                                >Sheet {key}</button>
+                    </li>) 
+                }
+
             </ul>
 
             {  
                 
                 [
-                    <div>aaaaa</div>,
-                    <div>bbbbb</div>,
-                    <div>ccccc</div>,
-                    <div>ddddd</div>
-                ][this.state.sheet]
+                    <div>No Data available</div>,
+                    ...getSendDataPoints().map(
+                        (quete , key ) => <div>
+                            
+                            <p>aaaaa {key}</p>
+                            <p>{quete.Bounces}</p>
+                            <p>{quete.Complaints}</p>
+                            <p>{quete.DeliveryAttempts}</p>
+                            <p>{quete.Rejects}</p>
+                            <p>{quete.Timestamp}</p>
+
+                            </div> )
+                ][ this.state.sheet ]
             }
 
         </div>)
