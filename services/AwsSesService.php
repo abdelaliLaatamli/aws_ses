@@ -20,7 +20,6 @@ class AwsSesService {
 
     private function authCredentials(){
 
-        // return [ $this->account["access_key"] , $this->account["secret_key"] ] ;
 
         $credentials  = new Credentials( $this->account["access_key"] , $this->account["secret_key"] );
 
@@ -30,42 +29,15 @@ class AwsSesService {
             'credentials' => $credentials
         ];
         // socks5://
-        $authFactory["http"] = [
-            'proxy' => "https://". $this->account["proxy"]
-        ];
-        // return  $authFactory;
-
-        // $this->sesClient = new Aws\Ses\SesClient([
-        //     'version' => '2010-12-01',
-        //     'region' => 'us-east-1',
-        //     'credentials' => [
-        //         'key' => $this->account["access_key"] ,
-        //         'secret' => $this->account["secret_key"],
-        //     ]
-        // ]);
-
+        if( $this->account["proxy"] != null ){
+            $authFactory["http"] = [
+                // 'proxy' => "https://". $this->account["proxy"]
+                'proxy' => $this->account["proxy"]
+            ];
+        }
+     
         $this->sesClient = new SesClient( $authFactory );
 
-        // return $authFactory;
-
-        // 'version' => '2010-12-01',
-        // 'region' => 'us-east-1',
-        // 'credentials' => [
-        //     'key' => $key,
-        //     'secret' => $secret,
-        // ]
-
-        // $d = Array
-        // (
-        //     [region] => es
-        //     [version] => 2016-11-15
-        //     [credentials] => pp
-        //     [http] => Array
-        //         (
-        //             [proxy] => zzzz
-        //         )
-        
-        // )
     }
 
     
@@ -74,9 +46,9 @@ class AwsSesService {
 
     public function getSesDetails(){
         // return $this->authCredentials();
-        $result = $this->sesClient->getSendQuota([ ])->toArray();
+        // $result = $this->sesClient->getSendQuota([ ])->toArray();
         // $result = $this->sesClient->getSendStatistics([])->toArray();//->get("SendDataPoints");
-        return $result ; 
+        // return $result ; 
         // $result = $this->sesClient->getSendQuota([ ]);
         // $result = $this->sesClient->getSendStatistics([ ]);
         // return $this->authCredentials();
