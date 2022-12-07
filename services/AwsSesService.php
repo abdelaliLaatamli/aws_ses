@@ -28,7 +28,7 @@ class AwsSesService {
             'version' => '2010-12-01',
             'credentials' => $credentials
         ];
-        // socks5://
+
         if( $this->account["proxy"] != null ){
             $authFactory["http"] = [
                 // 'proxy' => "https://". $this->account["proxy"]
