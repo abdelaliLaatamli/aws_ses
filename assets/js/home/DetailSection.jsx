@@ -31,15 +31,55 @@ class DetailSection extends Component {
             return SendDataPoints;
         }
 
+        const getSendQuota = _ => {
+            const getSendQuota = this.props.details.getSendQuota || undefined;
+            const SendDataPoints = getSendQuota || {}
+            return SendDataPoints;
+        }
+
 
         return (<div className="pt-4">
 
-                <div className="card mb-3" >
+                { (Object.keys( getSendQuota() )).length > 0 && <div className="card mb-3" >
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4 className="card-title text-center"> Sending limits </h4>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <p className="mb-1 h6" > Daily sending quota </p>
+                                <p className="mb-1" > { getSendQuota()[0].Max24HourSend } per 24-hours period</p>
+                            </div>
+                            <div className="col-md-6">
+                                <p className="mb-1 h6" > Maximum send rate </p>
+                                <p className="mb-1" > { getSendQuota()[0].MaxSendRate }  emails per second</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            }
+
+            { (Object.keys( getSendQuota() )).length > 0 &&  <div className="card mb-3" >
+                    <div className="card-body">
+                        <h4 className="card-title text-center"> Daily sending usage </h4>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <p className="mb-1 h6" > Emails sent </p>
+                                <p className="mb-1" >  { getSendQuota()[0].SentLast24Hours } </p>
+                            </div>
+                            <div className="col-md-4">
+                                <p className="mb-1 h6" > Remaining sends </p>
+                                <p className="mb-1" > { getSendQuota()[0].Max24HourSend - getSendQuota()[0].SentLast24Hours } </p>
+                            </div>
+                            <div className="col-md-4">
+                                <p className="mb-1 h6" > Sending quota used </p>
+                                <p className="mb-1" > { ( getSendQuota()[0].SentLast24Hours / getSendQuota()[0].Max24HourSend ) * 100 } % </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            
         
             <ul className="nav nav-tabs">   
                 { 

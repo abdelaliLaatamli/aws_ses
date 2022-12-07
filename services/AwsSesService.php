@@ -79,7 +79,6 @@ class AwsSesService {
                 ],
             ],
             "getSendQuota" => [
-
                 [
                     'Max24HourSend' => 200,
                     'MaxSendRate' => 1,
