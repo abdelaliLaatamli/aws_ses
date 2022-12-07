@@ -1,3 +1,5 @@
+
+
 class DetailSection extends Component {
 
 
@@ -37,7 +39,7 @@ class DetailSection extends Component {
             return SendDataPoints;
         }
 
-
+        
         return (<div className="pt-4">
 
                 { (Object.keys( getSendQuota() )).length > 0 && <div className="card mb-3" >
@@ -89,7 +91,8 @@ class DetailSection extends Component {
                             <button 
                                 className={ checkClass( key + 1 , this.state.sheet)} 
                                 onClick={ () => this.setState({sheet : key + 1 }) } 
-                                >Sheet {key}</button>
+                                >Sheet {key}
+                            </button>
                     </li>) 
                 }
 
@@ -100,16 +103,7 @@ class DetailSection extends Component {
                 [
                     <div>No Data available</div>,
                     ...getSendDataPoints().map(
-                        (quete , key ) => <div>
-
-                            <p>aaaaa {key}</p>
-                            <p>{quete.Bounces}</p>
-                            <p>{quete.Complaints}</p>
-                            <p>{quete.DeliveryAttempts}</p>
-                            <p>{quete.Rejects}</p>
-                            <p>{quete.Timestamp}</p>
-
-                            </div> )
+                        (quete , key ) =>  <Sheet keySheet={key} quete={quete} keys={ Object.keys(quete) } /> ) 
                 ][ this.state.sheet ]
             }
 

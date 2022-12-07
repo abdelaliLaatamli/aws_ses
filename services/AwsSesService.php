@@ -56,24 +56,24 @@ class AwsSesService {
             "getSendStatistics" => [
                 'SendDataPoints' => [
                     [
-                        'Bounces' => 0,
-                        'Complaints' => 0,
+                        'Bounces' => 1,
+                        'Complaints' => 9,
                         'DeliveryAttempts' => 5,
-                        'Rejects' => 0,
+                        'Rejects' => 4,
                         'Timestamp' => 0 ,
                     ],
                     [
-                        'Bounces' => 0,
-                        'Complaints' => 0,
+                        'Bounces' => 4,
+                        'Complaints' => 9,
                         'DeliveryAttempts' => 3,
-                        'Rejects' => 0,
+                        'Rejects' => 1,
                         'Timestamp' => 0,
                     ],
                     [
-                        'Bounces' => 0,
-                        'Complaints' => 0,
+                        'Bounces' => 9,
+                        'Complaints' => 5,
                         'DeliveryAttempts' => 1,
-                        'Rejects' => 0,
+                        'Rejects' => 10,
                         'Timestamp' => 0,
                     ],
                 ],

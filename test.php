@@ -50,3 +50,18 @@ $result = $SesClient->getSendStatistics([]);
 print_r( $result );
 
 // echo "test";
+
+{/* <div className="row">
+                            <div className="col-md-6">
+                                <p> data For Sheet {key}</p>
+                                <p> Bounces : {quete.Bounces}</p>
+                                <p> Complaints :  {quete.Complaints}</p>
+                                <p> DeliveryAttempts : {quete.DeliveryAttempts}</p>
+                                <p> Rejects : {quete.Rejects}</p>
+                                <p> Timestamp : {quete.Timestamp}</p>
+                            </div>
+                            <div className="col-md-6">
+                                {/* <canvas id="myChart" style={{ width:'600px', maxWidth : '600px' }}></canvas> 
+                            </div>
+                            </div>
+                             */}
