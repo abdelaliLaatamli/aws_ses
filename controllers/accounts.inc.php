@@ -23,7 +23,7 @@ if (!empty($_POST) && isset($_POST["request"])) {
             }catch( Exception $e ){
                 $response = [ 
                     "status"  => false ,
-                    "data"    => null ,
+                    "data"    => [] ,
                     "message" => "Error on getting accounts" ,
                     "error"   => $e->getMessage() 
                 ];
