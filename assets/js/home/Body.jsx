@@ -2,7 +2,6 @@ class Body extends Component {
 
 
     state = {
-        // editableAccount : {},
         details : {}
     }
 
@@ -24,19 +23,11 @@ class Body extends Component {
 
     }
 
-    // loadAccounts = async _ => {
-    //     const response = await this.httpRequest( 'list_accounts' , {}); 
-    //     this.setState({ accounts : response.data });
-    //     if( response.status != true ){
-    //         toastr.error( { title:  response.message  , message: response.error , duration : 7000 });
-    //     }
-    // } 
+
 
     render() {
         return (
             <div className="container">
-                {/* <h3 class="text-center mt-5"> Accounts Management </h3> */}
-
                 <FormAccountSection onGetDetails={ this.getDetails } />
                 <DetailSection details={this.state.details} />
 
@@ -47,11 +38,16 @@ class Body extends Component {
 
     getDetails = async details => {
         const response = await this.httpRequest( 'get_details' , details );
-        // console.log( response )
-        this.setState({ details : response.data })
-        // console.log( response.data )
+
+        if( response.status == true ){
+            toastr.notice({ title:  response.message  , message: response.message , duration : 7000 });
+            // console.log( response.data )
+            this.setState({ details : response.data })
+        }else{
+            toastr.error( { title:  response.message  , message: response.error , duration : 7000 });
+        }
+
     }
 
-    // accountEdit = editableAccount => this.setState({ editableAccount  }) 
 
 }

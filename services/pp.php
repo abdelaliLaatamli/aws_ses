@@ -10,7 +10,9 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 // curl_setopt($ch, CURLOPT_PROXY, 'http://awl6q:l14ouq2i@154.13.51.136:5432');
-curl_setopt( $ch , CURLOPT_PROXY , 'https://208.82.61.13:3128');
+			
+// curl_setopt( $ch , CURLOPT_PROXY , 'https://208.82.61.13:3128');
+curl_setopt( $ch , CURLOPT_PROXY , 'https://5b16741325:cgjnHpxY@107.173.201.31:8000');
 // curl_setopt($ch, CURLOPT_PROXY, 'socks5://awl6q:l14ouq2i@154.13.51.136:5432');
 // curl_setopt($ch, CURLOPT_PROXY, 'socks5://bob:marley@localhost:12345');
  

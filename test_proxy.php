@@ -19,8 +19,9 @@ function listProjects( $proxy )
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 
 
-    curl_setopt( $curl , CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt( $curl , CURLOPT_SSL_VERIFYPEER, 0);
+    // curl_setopt( $curl , CURLOPT_SSL_VERIFYHOST, 0);
+    // curl_setopt( $curl , CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($curl, CURLOPT_SSLVERSION, all);
 
     curl_setopt($curl, CURLOPT_PROXY, $proxy );
     
@@ -44,8 +45,9 @@ function listProjects( $proxy )
 // $proxy="165.225.8.14:10605";
 // $proxy="http://user-46025:123456789@190.112.193.101:1212";
 
-$proxy="https://142.132.168.173:3897";
-$proxy="https://157.90.20.243:3897";
-$proxy="https://mbenzrak2:iuNNuC9hZb@216.185.46.24:49155";
+// $proxy="https://142.132.168.173:3897";
+// $proxy="https://157.90.20.243:3897";
+// $proxy="https://mbenzrak2:iuNNuC9hZb@216.185.46.24:49155";
+$proxy="https://5b16741325:cgjnHpxY@107.173.201.31:8000";
 
 var_dump( listProjects( $proxy ) );

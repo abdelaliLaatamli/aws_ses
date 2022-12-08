@@ -26,7 +26,6 @@ if (!empty($_POST) && isset($_POST["request"])) {
                 $response = [ 
                     "status"  => true ,
                     "data"    =>  $awsSesService->getSesDetails() ,
-                    // "data"    =>  $account ,
                     "message" => "details got successfully" ,
                     "error"   => null
                 ];
@@ -34,7 +33,7 @@ if (!empty($_POST) && isset($_POST["request"])) {
             }catch( Exception $e ){
                 $response = [ 
                     "status"  => false ,
-                    "data"    => null ,
+                    "data"    => [] ,
                     "message" => "Error on getting details" ,
                     "error"   => $e->getMessage()
                 ];

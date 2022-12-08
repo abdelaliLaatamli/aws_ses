@@ -12,8 +12,15 @@ class DetailSection extends Component {
         if(  Object.keys( this.props.details ).length == 0 ){
             this.setState({sheet:0})
         }else{
-            if( this.state.sheet == 0 )
+         
+
+            if( this.state.sheet == 0 && this.props.details.getSendStatistics.length > 0 ){
                 this.setState({sheet:1})
+            }
+            // if( this.props.details.getSendStatistics.length == 0 ){
+            //     this.setState({sheet:0})
+            // }
+                
         }
         
     }
@@ -28,9 +35,10 @@ class DetailSection extends Component {
 
 
         const getSendDataPoints = _ => {
-            const getSendStatistics = this.props.details.getSendStatistics || undefined;
-            const SendDataPoints = (getSendStatistics && getSendStatistics.SendDataPoints ) || []
-            return SendDataPoints;
+            const getSendStatistics = this.props.details.getSendStatistics || [];
+            // const SendDataPoints = (getSendStatistics && getSendStatistics.SendDataPoints ) || []
+            // console.log( getSendStatistics , this.props.details  )
+            return getSendStatistics;
         }
 
         const getSendQuota = _ => {
@@ -48,11 +56,11 @@ class DetailSection extends Component {
                         <div className="row">
                             <div className="col-md-6">
                                 <p className="mb-1 h6" > Daily sending quota </p>
-                                <p className="mb-1" > { getSendQuota()[0].Max24HourSend } per 24-hours period</p>
+                                <p className="mb-1" > { getSendQuota().Max24HourSend } per 24-hours period</p>
                             </div>
                             <div className="col-md-6">
                                 <p className="mb-1 h6" > Maximum send rate </p>
-                                <p className="mb-1" > { getSendQuota()[0].MaxSendRate }  emails per second</p>
+                                <p className="mb-1" > { getSendQuota().MaxSendRate }  emails per second</p>
                             </div>
                         </div>
 
@@ -66,15 +74,15 @@ class DetailSection extends Component {
                         <div className="row">
                             <div className="col-md-4">
                                 <p className="mb-1 h6" > Emails sent </p>
-                                <p className="mb-1" >  { getSendQuota()[0].SentLast24Hours } </p>
+                                <p className="mb-1" >  { getSendQuota().SentLast24Hours } </p>
                             </div>
                             <div className="col-md-4">
                                 <p className="mb-1 h6" > Remaining sends </p>
-                                <p className="mb-1" > { getSendQuota()[0].Max24HourSend - getSendQuota()[0].SentLast24Hours } </p>
+                                <p className="mb-1" > { getSendQuota().Max24HourSend - getSendQuota().SentLast24Hours } </p>
                             </div>
                             <div className="col-md-4">
                                 <p className="mb-1 h6" > Sending quota used </p>
-                                <p className="mb-1" > { ( getSendQuota()[0].SentLast24Hours / getSendQuota()[0].Max24HourSend ) * 100 } % </p>
+                                <p className="mb-1" > { ( getSendQuota().SentLast24Hours / getSendQuota().Max24HourSend ) * 100 } % </p>
                             </div>
                         </div>
 
