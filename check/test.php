@@ -1,0 +1,71 @@
+<?php 
+
+// require __DIR__ ."/bootstrap/bootstrap.inc.php";
+
+
+
+// echo json_encode( $data );
+
+
+// require '/path/to/vendor/autoload.php';
+require __DIR__. '/vendor/autoload.php';
+
+// use Aws\S3\S3Client;
+
+// // Instantiate an Amazon S3 client.
+// $s3 = new S3Client([
+//     'version' => 'latest',
+//     'region'  => 'us-west-2'
+// ]);
+$key="AKIAQPO2V3YOVMK4URPW";
+$secret="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";
+// 154.13.51.136:5432:awl6q:l14ouq2i 
+
+// awl6q:l14ouq2i@154.13.51.136:5432
+
+$SesClient = new Aws\Ses\SesClient([
+    'version' => '2010-12-01',
+    'region' => 'us-east-1',
+    'credentials' => [
+        'key' => $key,
+        'secret' => $secret,
+    ]
+]);
+
+
+
+
+// Max24HourSend => Number of emails you have sent during the past 24 hours
+// MaxSendRate => Sending quota for the current 24-hour period
+// SentLast24Hours => Maximum send rate
+// [data:Aws\Result:private] => Array(
+// [Max24HourSend] => 200
+// [MaxSendRate] => 1
+// [SentLast24Hours] => 0
+// $result = $SesClient->getSendQuota([]);
+
+$result = $SesClient->getSendStatistics([]);
+
+
+print_r( $result );
+
+// echo "test";
+
+{/* <div className="row">
+                            <div className="col-md-6">
+                                <p> data For Sheet {key}</p>
+                                <p> Bounces : {quete.Bounces}</p>
+                                <p> Complaints :  {quete.Complaints}</p>
+                                <p> DeliveryAttempts : {quete.DeliveryAttempts}</p>
+                                <p> Rejects : {quete.Rejects}</p>
+                                <p> Timestamp : {quete.Timestamp}</p>
+                            </div>
+                            <div className="col-md-6">
+                                {/* <canvas id="myChart" style={{ width:'600px', maxWidth : '600px' }}></canvas> 
+                            </div>
+                            </div>
+                             */}
+
+
+
+{"status":true,"data":{"getSendStatistics":[{"Timestamp":"2022-11-25T18:16:00+00:00","DeliveryAttempts":"12073","Bounces":"2","Complaints":"167","Rejects":"0"},{"Timestamp":"2022-11-25T14:46:00+00:00","DeliveryAttempts":"12015","Bounces":"1","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T11:16:00+00:00","DeliveryAttempts":"505","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T01:16:00+00:00","DeliveryAttempts":"16105","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T23:31:00+00:00","DeliveryAttempts":"4080","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T17:01:00+00:00","DeliveryAttempts":"12830","Bounces":"0","Complaints":"335","Rejects":"0"},{"Timestamp":"2022-11-26T11:46:00+00:00","DeliveryAttempts":"16024","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T10:01:00+00:00","DeliveryAttempts":"16274","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-27T00:01:00+00:00","DeliveryAttempts":"16279","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T16:46:00+00:00","DeliveryAttempts":"12803","Bounces":"0","Complaints":"403","Rejects":"0"},{"Timestamp":"2022-11-26T11:31:00+00:00","DeliveryAttempts":"16240","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T18:31:00+00:00","DeliveryAttempts":"10752","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T13:16:00+00:00","DeliveryAttempts":"7705","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T09:46:00+00:00","DeliveryAttempts":"2422","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T23:46:00+00:00","DeliveryAttempts":"16258","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T22:46:00+00:00","DeliveryAttempts":"16179","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T00:31:00+00:00","DeliveryAttempts":"16220","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T14:31:00+00:00","DeliveryAttempts":"2037","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T11:01:00+00:00","DeliveryAttempts":"8934","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T18:01:00+00:00","DeliveryAttempts":"6595","Bounces":"0","Complaints":"141","Rejects":"0"},{"Timestamp":"2022-11-26T01:01:00+00:00","DeliveryAttempts":"16123","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T23:16:00+00:00","DeliveryAttempts":"15777","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T00:16:00+00:00","DeliveryAttempts":"16169","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T10:46:00+00:00","DeliveryAttempts":"3918","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T17:46:00+00:00","DeliveryAttempts":"5448","Bounces":"0","Complaints":"54","Rejects":"0"},{"Timestamp":"2022-11-26T00:46:00+00:00","DeliveryAttempts":"14047","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T11:16:00+00:00","DeliveryAttempts":"16242","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T18:16:00+00:00","DeliveryAttempts":"16296","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T14:46:00+00:00","DeliveryAttempts":"7936","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T18:01:00+00:00","DeliveryAttempts":"17017","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T11:31:00+00:00","DeliveryAttempts":"9514","Bounces":"0","Complaints":"187","Rejects":"0"},{"Timestamp":"2022-11-25T18:31:00+00:00","DeliveryAttempts":"965","Bounces":"0","Complaints":"12","Rejects":"0"},{"Timestamp":"2022-11-25T15:01:00+00:00","DeliveryAttempts":"22","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T01:31:00+00:00","DeliveryAttempts":"16101","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T22:16:00+00:00","DeliveryAttempts":"9663","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T15:46:00+00:00","DeliveryAttempts":"5943","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T15:31:00+00:00","DeliveryAttempts":"2645","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T23:01:00+00:00","DeliveryAttempts":"16141","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T22:46:00+00:00","DeliveryAttempts":"16099","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T16:16:00+00:00","DeliveryAttempts":"941","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-27T00:46:00+00:00","DeliveryAttempts":"10292","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T18:31:00+00:00","DeliveryAttempts":"1081","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T23:46:00+00:00","DeliveryAttempts":"14805","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T15:31:00+00:00","DeliveryAttempts":"14042","Bounces":"3","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T02:01:00+00:00","DeliveryAttempts":"10911","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T00:16:00+00:00","DeliveryAttempts":"16124","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T22:31:00+00:00","DeliveryAttempts":"13362","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T10:46:00+00:00","DeliveryAttempts":"10934","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T17:46:00+00:00","DeliveryAttempts":"16296","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T00:01:00+00:00","DeliveryAttempts":"2638","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T01:46:00+00:00","DeliveryAttempts":"16083","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T15:16:00+00:00","DeliveryAttempts":"49","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T22:16:00+00:00","DeliveryAttempts":"3755","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T10:31:00+00:00","DeliveryAttempts":"16255","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T15:46:00+00:00","DeliveryAttempts":"11471","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T17:31:00+00:00","DeliveryAttempts":"6892","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-27T00:31:00+00:00","DeliveryAttempts":"16295","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T23:31:00+00:00","DeliveryAttempts":"4962","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T18:16:00+00:00","DeliveryAttempts":"17037","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T10:01:00+00:00","DeliveryAttempts":"1508","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T22:31:00+00:00","DeliveryAttempts":"16198","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T16:01:00+00:00","DeliveryAttempts":"9827","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T23:01:00+00:00","DeliveryAttempts":"326","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T13:01:00+00:00","DeliveryAttempts":"11719","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T16:31:00+00:00","DeliveryAttempts":"5221","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T23:31:00+00:00","DeliveryAttempts":"3599","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T09:46:00+00:00","DeliveryAttempts":"478","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T23:16:00+00:00","DeliveryAttempts":"16201","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T10:16:00+00:00","DeliveryAttempts":"8408","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T00:01:00+00:00","DeliveryAttempts":"16208","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T10:31:00+00:00","DeliveryAttempts":"4032","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-27T00:16:00+00:00","DeliveryAttempts":"16239","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T17:16:00+00:00","DeliveryAttempts":"2","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-24T17:46:00+00:00","DeliveryAttempts":"16917","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-25T00:46:00+00:00","DeliveryAttempts":"3921","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T00:31:00+00:00","DeliveryAttempts":"14583","Bounces":"0","Complaints":"213","Rejects":"0"},{"Timestamp":"2022-11-26T11:01:00+00:00","DeliveryAttempts":"16223","Bounces":"0","Complaints":"0","Rejects":"0"},{"Timestamp":"2022-11-26T18:01:00+00:00","DeliveryAttempts":"16298","Bounces":"0","Complaints":"0","Rejects":"0"}],"getSendQuota":{"Max24HourSend":460300,"MaxSendRate":24,"SentLast24Hours":0,"@metadata":{"statusCode":200,"effectiveUri":"https:\/\/email.us-west-2.amazonaws.com","headers":{"date":"Thu, 08 Dec 2022 17:46:37 GMT","content-type":"text\/xml","content-length":"373","connection":"keep-alive","x-amzn-requestid":"88aa516b-7b8f-4416-b9c2-126d2b65796e"},"transferStats":{"http":[[]]}}}},"message":"details got successfully","error":null}

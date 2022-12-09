@@ -4,27 +4,18 @@ class DetailSection extends Component {
 
 
     state = {
-        sheet : 0 ,
-        sheets : [
-            "Global" ,
-            "Bounces" ,
-            "Complaints" ,
-            "DeliveryAttempts",
-            "Rejects"
-        ]
+        sheet : 0
     }
 
     componentDidUpdate(prevProps) {
         
         if(  Object.keys( this.props.details ).length == 0 ){
-            // this.setState({sheet:0})
-            this.setState({sheet:'Global'})
+            this.setState({sheet:0})
         }else{
          
 
             if( this.state.sheet == 0 && this.props.details.getSendStatistics.length > 0 ){
-                this.setState({sheet:'Global'})
-                // this.setState({sheet:1})
+                this.setState({sheet:1})
             }
             // if( this.props.details.getSendStatistics.length == 0 ){
             //     this.setState({sheet:0})
@@ -54,21 +45,13 @@ class DetailSection extends Component {
             return SendDataPoints;
         }
 
-        // console.log( 
-        //     getSendDataPoints()
-        //         .map( sheet => ({ ...sheet , Timestamp : new Date( sheet.Timestamp ) })  )
-        //         .sort((a, b) => a.Timestamp - b.Timestamp)
-        //         .groupBy( elm => elm.Timestamp.toLocaleDateString())
-        // );
-        // getSendDataPoints();
-
-        const filterData = criteria => getSendDataPoints()
-                .map( sheet => { 
-                    let aa= {}; aa[criteria] = sheet[criteria];
-                    return {...aa , Timestamp : new Date( sheet.Timestamp ) } })  
+        console.log( 
+            getSendDataPoints()
+                .map( sheet => ({ ...sheet , Timestamp : new Date( sheet.Timestamp ) })  )
                 .sort((a, b) => a.Timestamp - b.Timestamp)
-                // .groupBy( elm => elm.Timestamp.toLocaleDateString())
-         
+                .groupBy( elm => elm.Timestamp.toLocaleDateString())
+        );
+        // getSendDataPoints();
         
         return (<div className="pt-4">
 
@@ -115,40 +98,30 @@ class DetailSection extends Component {
         
             <ul className="nav nav-tabs">   
                 { 
-                    this.state.sheets.map(
-                        ( sheet ) => <li className="nav-item">
-                            <button 
-                                className={ checkClass( sheet , this.state.sheet)} 
-                                onClick={ () => this.setState({sheet : sheet }) }> {sheet}
-                            </button>
-                    </li>) 
-                    /* getSendDataPoints().map(
+               
+                    getSendDataPoints().map(
                         ( _ , key ) => <li className="nav-item">
                             <button 
                                 className={ checkClass( key + 1 , this.state.sheet)} 
                                 onClick={ () => this.setState({sheet : key + 1 }) } 
                                 >Sheet {key}
                             </button>
-                    </li>)  */
+                    </li>) 
                 }
 
             </ul>
 
             {
-                {
-                    "Nodata"     : <div>No Data available</div>,
-                    "Global"           : <Sheet keySheet={"Global"}  quete={ filterData("Complaints") }  /> ,
-                    "Bounces"          : <Sheet keySheet={"Bounces"} quete={ 
-                        getSendDataPoints()
-                            .map( sheet => ({  Bounces : sheet.Bounces , Timestamp : new Date( sheet.Timestamp ) })  )
-                            .sort((a, b) => a.Timestamp - b.Timestamp)
-                            // .groupBy( elm => elm.Timestamp.toLocaleDateString())
-                    }  /> , 
-                    "Complaints"       : <Sheet keySheet={"Complaints"} quete={ filterData("Complaints") } /> , 
-                    "DeliveryAttempts" : <Sheet keySheet={"DeliveryAttempts"} quete={ filterData("DeliveryAttempts") } /> ,
-                    "Rejects"          : <Sheet keySheet={"Rejects"} quete={ filterData("Rejects") } />  
-                }[ this.state.sheet ]
-            }
+                
+                
+                /* {  
+                
+                [
+                    <div>No Data available</div>,
+                    ...getSendDataPoints().map(
+                        (quete , key ) =>  <Sheet keySheet={key} quete={quete} keys={ Object.keys(quete) } /> ) 
+                ][ this.state.sheet ]
+            } */}
 
         </div>)
     }

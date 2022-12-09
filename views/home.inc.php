@@ -27,7 +27,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react-chartjs-2/1.2.9/react-chartjs-2.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-chartjs-2/2.9.0/react-chartjs-2.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.26.1/index.min.js"></script>
 
     
     
