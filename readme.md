@@ -3,7 +3,7 @@ to read
 
 - [What is an env file and how to use an env file in PHP?](https://udoyhasan.medium.com/what-is-an-env-file-and-how-to-use-an-env-file-in-php-4e146358cca6)
 
-
+- [Class SesClient](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.Ses.SesClient.html)
 
 <!-- ID de clé d'accès :
 AKIATAWNNWVZ5PYFBPOT

@@ -16,7 +16,17 @@ class Sheet extends Component {
     state = {
         filter : "all"
     }
+    constructor(props) {
+      super(props);
+      this.myRef = React.createRef();
+    }
+  
 
+    componentDidMount() {
+        const dates =  Object.keys(this.groupBy());
+        this.myRef.current.value = dates[ dates.length - 1 ] ;
+        this.setState( { filter : dates[ dates.length - 1 ] } ) 
+    }
 
     filterByDate = (event) => this.setState( { filter : event.target.value } ) 
 
@@ -24,6 +34,10 @@ class Sheet extends Component {
     groupBy = _ =>  this.props.quete.groupBy( elm => elm.Timestamp.toLocaleDateString())
     getFiltredData = _ => this.state.filter == "all" ? this.props.quete  : this.groupBy()[this.state.filter];
     
+    checkDay = ( ky , days ) =>  {
+      const isChecked = ky == days.length - 1 ;
+      return isChecked;
+    }
 
     render() {
 
@@ -52,9 +66,9 @@ class Sheet extends Component {
           }
         ],
       };
+      
 
-
-      return ( <div className="row">
+      return ( <div className="row pt-3">
                       <div className="col-md-6">
 
                               <p> data For Sheet {this.props.keySheet}</p>
@@ -67,9 +81,9 @@ class Sheet extends Component {
                                 <p> Timestamp : {this.props.quete.Timestamp}</p> */}
                             </div>
                             <div className="col-md-6">
-                              <select onChange={ this.filterByDate } class="form-select form-select-sm" required aria-label="Default select example">
+                              <select onChange={ this.filterByDate } ref={this.myRef} class="form-select form-select-sm" required aria-label="Default select example">
                                 <option selected value="all">Open this select menu</option>
-                                { Object.keys(this.groupBy()).map( quete => <option value={quete}>{quete}</option> ) }
+                                { Object.keys(this.groupBy()).map( ( day ) => <option value={day}>{day}</option> ) }
                               </select>
                               <Line options={options} data={data}/>
                             </div>

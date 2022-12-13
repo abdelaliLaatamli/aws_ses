@@ -46,6 +46,7 @@ class AwsSesService {
 
     public function getSesDetails(){
 
+        // https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#getsendquota
         $sendQuota = $this->sesClient->getSendQuota([ ])->toArray();
         $sendStatistics = $this->sesClient->getSendStatistics([])->toArray();
 
