@@ -62,10 +62,17 @@ class DetailSection extends Component {
         // );
         // getSendDataPoints();
 
-        const filterData = criteria => getSendDataPoints()
+        const filterData = criterias => getSendDataPoints()
                 .map( sheet => { 
-                    let aa= {}; aa[criteria] = sheet[criteria];
-                    return {...aa , Timestamp : new Date( sheet.Timestamp ) } })  
+                    // console.log( criterias.split(',')  )
+
+                    let data= {}; 
+
+                    criterias.split(',').forEach(criteria => { data[criteria] = sheet[criteria];  });
+                    // console.log( data )
+                    // data[criteria] = sheet[criteria];
+
+                    return {...data , Timestamp : new Date( sheet.Timestamp ) } })  
                 .sort((a, b) => a.Timestamp - b.Timestamp)
                 // .groupBy( elm => elm.Timestamp.toLocaleDateString())
          
@@ -122,14 +129,7 @@ class DetailSection extends Component {
                                 onClick={ () => this.setState({sheet : sheet }) }> {sheet}
                             </button>
                     </li>) 
-                    /* getSendDataPoints().map(
-                        ( _ , key ) => <li className="nav-item">
-                            <button 
-                                className={ checkClass( key + 1 , this.state.sheet)} 
-                                onClick={ () => this.setState({sheet : key + 1 }) } 
-                                >Sheet {key}
-                            </button>
-                    </li>)  */
+
                 }
 
             </ul>
@@ -137,7 +137,7 @@ class DetailSection extends Component {
             {
                 {
                     "Nodata"     : <div>No Data available</div>,
-                    "Global"           : <Sheet keySheet={"Global"}  quete={ filterData("Complaints") }  /> ,
+                    "Global"           : <GlobalSheet keySheet={"Global"}  quete={ filterData("Bounces,Complaints,DeliveryAttempts,Rejects") }  /> ,
                     "Bounces"          : <Sheet keySheet={"Bounces"} quete={ 
                         getSendDataPoints()
                             .map( sheet => ({  Bounces : sheet.Bounces , Timestamp : new Date( sheet.Timestamp ) })  )

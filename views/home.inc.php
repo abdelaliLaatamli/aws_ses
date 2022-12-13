@@ -44,6 +44,8 @@
     <script type="text/babel" src="./assets/js/home/FormAccountSection.jsx"></script>
     <script type="text/babel" src="./assets/js/home/DetailSection.jsx"></script>
     <script type="text/babel" src="./assets/js/home/Sheet.jsx"></script>
+    <script type="text/babel" src="./assets/js/home/GlobalSheet.jsx"></script>
+    
     
     
     <!-- <script type="text/babel" src="./assets/js/accounts/Body.jsx"></script>
