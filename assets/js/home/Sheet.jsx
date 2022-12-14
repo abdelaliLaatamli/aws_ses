@@ -13,9 +13,6 @@ const  {
 
 class Sheet extends Component {
 
-    state = {
-        filter : "all"
-    }
     constructor(props) {
       super(props);
       this.myRef = React.createRef();
@@ -25,14 +22,14 @@ class Sheet extends Component {
     componentDidMount() {
         const dates =  Object.keys(this.groupBy());
         this.myRef.current.value = dates[ dates.length - 1 ] ;
-        this.setState( { filter : dates[ dates.length - 1 ] } ) 
+        this.props.onFilterByDateChange( dates[ dates.length - 1 ] )
     }
 
-    filterByDate = (event) => this.setState( { filter : event.target.value } ) 
+    filterByDate = (event) => this.props.onFilterByDateChange( event.target.value );
 
 
     groupBy = _ =>  this.props.quete.groupBy( elm => elm.Timestamp.toLocaleDateString())
-    getFiltredData = _ => this.state.filter == "all" ? this.props.quete  : this.groupBy()[this.state.filter];
+    getFiltredData = _ => this.props.filterByDate == "all" ? this.props.quete  : this.groupBy()[this.props.filterByDate];
     
     checkDay = ( ky , days ) =>  {
       const isChecked = ky == days.length - 1 ;
@@ -56,10 +53,10 @@ class Sheet extends Component {
 
      const data = {
 
-        labels :  this.getFiltredData().map( elm => this.state.filter == "all" ? elm.Timestamp.toString() : elm.Timestamp.toLocaleTimeString() ),
+        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toString() : elm.Timestamp.toLocaleTimeString() ),
         datasets: [
           {
-            label: this.props.keySheet +" "+ this.state.filter ,
+            label: this.props.keySheet +" "+ this.props.filterByDate ,
             data:  this.getFiltredData().map( elm =>  parseInt( elm[this.props.keySheet]?? '-1' ) )  ,
             borderColor: 'rgb(255, 99, 132)',
             backgroundColor: 'rgba(255, 99, 132, 0.5)',

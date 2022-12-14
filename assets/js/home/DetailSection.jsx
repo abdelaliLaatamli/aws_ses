@@ -5,6 +5,7 @@ class DetailSection extends Component {
 
     state = {
         sheet : 0 ,
+        filterByDate : "all" ,
         sheets : [
             "Global" ,
             "Bounces" ,
@@ -17,22 +18,19 @@ class DetailSection extends Component {
     componentDidUpdate(prevProps) {
         
         if(  Object.keys( this.props.details ).length == 0 ){
-            // this.setState({sheet:0})
             this.setState({sheet:'Global'})
         }else{
          
-
             if( this.state.sheet == 0 && this.props.details.getSendStatistics.length > 0 ){
                 this.setState({sheet:'Global'})
-                // this.setState({sheet:1})
             }
-            // if( this.props.details.getSendStatistics.length == 0 ){
-            //     this.setState({sheet:0})
-            // }
-                
+  
         }
         
     }
+
+    filterChange = ( filterByDate ) => this.setState({ filterByDate });
+
 
     render(){
 
@@ -54,29 +52,15 @@ class DetailSection extends Component {
             return SendDataPoints;
         }
 
-        // console.log( 
-        //     getSendDataPoints()
-        //         .map( sheet => ({ ...sheet , Timestamp : new Date( sheet.Timestamp ) })  )
-        //         .sort((a, b) => a.Timestamp - b.Timestamp)
-        //         .groupBy( elm => elm.Timestamp.toLocaleDateString())
-        // );
-        // getSendDataPoints();
-
         const filterData = criterias => getSendDataPoints()
                 .map( sheet => { 
-                    // console.log( criterias.split(',')  )
 
                     let data= {}; 
-
                     criterias.split(',').forEach(criteria => { data[criteria] = sheet[criteria];  });
-                    // console.log( data )
-                    // data[criteria] = sheet[criteria];
-
                     return {...data , Timestamp : new Date( sheet.Timestamp ) } })  
                 .sort((a, b) => a.Timestamp - b.Timestamp)
-                // .groupBy( elm => elm.Timestamp.toLocaleDateString())
+
          
-        
         return (<div className="pt-4">
 
                 { (Object.keys( getSendQuota() )).length > 0 && <div className="card mb-3" >
@@ -96,6 +80,7 @@ class DetailSection extends Component {
                     </div>
                 </div>
             }
+
 
             { (Object.keys( getSendQuota() )).length > 0 &&  <div className="card mb-3" >
                     <div className="card-body">
@@ -136,17 +121,28 @@ class DetailSection extends Component {
 
             {
                 {
-                    "Nodata"     : <div>No Data available</div>,
-                    "Global"           : <GlobalSheet keySheet={"Global"}  quete={ filterData("Bounces,Complaints,DeliveryAttempts,Rejects") }  /> ,
-                    "Bounces"          : <Sheet keySheet={"Bounces"} quete={ 
-                        getSendDataPoints()
-                            .map( sheet => ({  Bounces : sheet.Bounces , Timestamp : new Date( sheet.Timestamp ) })  )
-                            .sort((a, b) => a.Timestamp - b.Timestamp)
-                            // .groupBy( elm => elm.Timestamp.toLocaleDateString())
-                    }  /> , 
-                    "Complaints"       : <Sheet keySheet={"Complaints"} quete={ filterData("Complaints") } /> , 
-                    "DeliveryAttempts" : <Sheet keySheet={"DeliveryAttempts"} quete={ filterData("DeliveryAttempts") } /> ,
-                    "Rejects"          : <Sheet keySheet={"Rejects"} quete={ filterData("Rejects") } />  
+                    "Nodata"           : <div>No Data available</div>,
+                    "Global"           : <GlobalSheet 
+                                            keySheet={"Global"} filterByDate={this.state.filterByDate} 
+                                            quete={ filterData("Bounces,Complaints,DeliveryAttempts,Rejects") } 
+                                            onFilterByDateChange={ this.filterChange }/> ,
+                    "Bounces"          : <Sheet 
+                                            keySheet={"Bounces"} filterByDate={this.state.filterByDate} 
+                                            quete={  filterData("Bounces")  }
+                                            onFilterByDateChange={ this.filterChange } /> , 
+                    "Complaints"       : <Sheet 
+                                            keySheet={"Complaints"} filterByDate={this.state.filterByDate} 
+                                            quete={ filterData("Complaints") }
+                                            onFilterByDateChange={ this.filterChange } /> , 
+                    "DeliveryAttempts" : <Sheet 
+                                            keySheet={"DeliveryAttempts"} filterByDate={this.state.filterByDate} 
+                                            quete={ filterData("DeliveryAttempts") }
+                                            onFilterByDateChange={ this.filterChange } /> ,
+                    "Rejects"          : <Sheet 
+                                            keySheet={"Rejects"} filterByDate={this.state.filterByDate} 
+                                            quete={ filterData("Rejects") } 
+                                            onFilterByDateChange={ this.filterChange }
+                                            />  
                 }[ this.state.sheet ]
             }
 
