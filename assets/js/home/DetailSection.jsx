@@ -125,22 +125,23 @@ class DetailSection extends Component {
                     "Global"           : <GlobalSheet 
                                             keySheet={"Global"} filterByDate={this.state.filterByDate} 
                                             quete={ filterData("Bounces,Complaints,DeliveryAttempts,Rejects") } 
+                                            maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange }/> ,
                     "Bounces"          : <Sheet 
                                             keySheet={"Bounces"} filterByDate={this.state.filterByDate} 
-                                            quete={  filterData("Bounces")  }
+                                            quete={  filterData("Bounces")  } maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange } /> , 
                     "Complaints"       : <Sheet 
                                             keySheet={"Complaints"} filterByDate={this.state.filterByDate} 
-                                            quete={ filterData("Complaints") }
+                                            quete={ filterData("Complaints") } maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange } /> , 
                     "DeliveryAttempts" : <Sheet 
                                             keySheet={"DeliveryAttempts"} filterByDate={this.state.filterByDate} 
-                                            quete={ filterData("DeliveryAttempts") }
+                                            quete={ filterData("DeliveryAttempts") } maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange } /> ,
                     "Rejects"          : <Sheet 
                                             keySheet={"Rejects"} filterByDate={this.state.filterByDate} 
-                                            quete={ filterData("Rejects") } 
+                                            quete={ filterData("Rejects") } maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange }
                                             />  
                 }[ this.state.sheet ]

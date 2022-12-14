@@ -13,6 +13,8 @@ const  {
 
 class GlobalSheet extends Component {
 
+
+
     constructor(props) {
       super(props);
       this.myRef = React.createRef();
@@ -79,9 +81,12 @@ class GlobalSheet extends Component {
         },
       };
 
+      const optionsPercent = JSON.parse( JSON.stringify(options) )
+      optionsPercent["scales"] = { yAxes: [  { ticks: { beginAtZero: true,  callback: value => value + "%" }}] } ;
+
      const data = {
 
-        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toString() : elm.Timestamp.toLocaleTimeString() ),
+        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
         datasets: [
 
           ...this.getKeys().map( ( cat , k ) => ({ 
@@ -95,10 +100,46 @@ class GlobalSheet extends Component {
       };
 
 
-      return ( <div className="row pt-3">
-                      <div className="col-md-6">
+      const dataPercent = {
 
-                              <p> data For Sheet {this.props.keySheet}</p>
+        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
+        datasets: [
+
+          ...this.getKeys().map( ( cat , k ) => ({ 
+            label: cat +" "+ this.props.filterByDate ,
+            data:  this.getFiltredData().map( elm => { 
+                let percent = ( parseInt( elm[cat] )  / this.props.maxSend ) * 100;
+                return parseFloat( percent.toFixed(2) );
+            }) ,
+            borderColor: this.getBorderColor(k), 
+            backgroundColor: this.getBackgroundColor(k),
+          }) )
+
+        ],
+      };
+
+      // console.log( dataPercent )
+
+
+      return ( <React.Fragment>
+
+                  <div className="row pt-3"> 
+                      <div className="col-md-12"> 
+                          <h4 className="text-center" > Data For Sheet {this.props.keySheet}</h4>    
+                      </div>
+                  </div> 
+
+                  <div className="row pt-3"> 
+                      <div className="col-md-4 offset-4"> 
+                          <select onChange={ this.filterByDate } ref={this.myRef} class="form-select form-select-sm" required aria-label="Default select example">
+                                <option selected value="all">Open this select menu</option>
+                                { Object.keys(this.groupBy()).map( ( day ) => <option value={day}>{day}</option> ) }
+                          </select>
+                      </div>
+                  </div> 
+        
+                  <div className="row pt-3">
+                      <div className="col-md-6">
 
                                 {/* <p> data For Sheet {this.props.keySheet}</p>
                                 <p> Bounces : {this.props.quete.Bounces}</p>
@@ -106,15 +147,13 @@ class GlobalSheet extends Component {
                                 <p> DeliveryAttempts : {this.props.quete.DeliveryAttempts}</p>
                                 <p> Rejects : {this.props.quete.Rejects}</p>
                                 <p> Timestamp : {this.props.quete.Timestamp}</p> */}
-                            </div>
-                            <div className="col-md-6">
-                              <select onChange={ this.filterByDate } ref={this.myRef} class="form-select form-select-sm" required aria-label="Default select example">
-                                <option selected value="all">Open this select menu</option>
-                                { Object.keys(this.groupBy()).map( ( day ) => <option value={day}>{day}</option> ) }
-                              </select>
-                              <Line options={options} data={data}/>
-                            </div>
-                </div>  );
+                          <Line options={optionsPercent} data={dataPercent}/>
+                      </div>
+                      <div className="col-md-6">   
+                          <Line options={options} data={data}/>
+                      </div>
+                    </div> 
+              </React.Fragment> );
 
     }
 }
