@@ -118,8 +118,6 @@ class GlobalSheet extends Component {
         ],
       };
 
-      // console.log( dataPercent )
-
 
       return ( <React.Fragment>
 

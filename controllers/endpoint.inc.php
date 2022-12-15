@@ -25,8 +25,8 @@ if (!empty($_POST) && isset($_POST["request"])) {
 
                 $response = [ 
                     "status"  => true ,
-                    // "data"    =>  $awsSesService->getSesDetails() ,
-                    "data"    =>  $awsSesService->getSesDetailsMock() ,
+                    "data"    =>  $awsSesService->getSesDetails() ,
+                    // "data"    =>  $awsSesService->getSesDetailsMock() ,
                     "message" => "details got successfully" ,
                     "error"   => null
                 ];

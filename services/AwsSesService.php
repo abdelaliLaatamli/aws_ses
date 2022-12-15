@@ -14,7 +14,7 @@ class AwsSesService {
     {
         $this->account = $account ;
         $this->region = $region;
-        // $this->authCredentials();
+        $this->authCredentials();
 
     }
 
