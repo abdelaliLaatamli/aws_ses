@@ -3,7 +3,7 @@ class NavBar extends Component {
     render() { 
         return (     
         <nav className="navbar navbar-expand-lg navbar-light bg-warning" > 
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <a className="navbar-brand" href={ "/"} > AMAZON  </a>  
             </div>
         </nav>

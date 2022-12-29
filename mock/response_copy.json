@@ -1,0 +1,1185 @@
+{
+    "status": true,
+    "data": {
+        "getSendStatistics": [
+            {
+                "Timestamp": "2022-12-21T18:17:00+00:00",
+                "DeliveryAttempts": "12999",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T20:02:00+00:00",
+                "DeliveryAttempts": "10030",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T16:47:00+00:00",
+                "DeliveryAttempts": "11091",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T11:32:00+00:00",
+                "DeliveryAttempts": "13430",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T13:17:00+00:00",
+                "DeliveryAttempts": "10995",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T15:02:00+00:00",
+                "DeliveryAttempts": "9",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T15:32:00+00:00",
+                "DeliveryAttempts": "11697",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T17:17:00+00:00",
+                "DeliveryAttempts": "4863",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T23:47:00+00:00",
+                "DeliveryAttempts": "13274",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T21:02:00+00:00",
+                "DeliveryAttempts": "6501",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T16:02:00+00:00",
+                "DeliveryAttempts": "1334",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T17:47:00+00:00",
+                "DeliveryAttempts": "3368",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T11:02:00+00:00",
+                "DeliveryAttempts": "13410",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T14:02:00+00:00",
+                "DeliveryAttempts": "12",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T17:32:00+00:00",
+                "DeliveryAttempts": "6942",
+                "Bounces": "0",
+                "Complaints": "40",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T15:02:00+00:00",
+                "DeliveryAttempts": "3",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T11:32:00+00:00",
+                "DeliveryAttempts": "8514",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T18:02:00+00:00",
+                "DeliveryAttempts": "3572",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T23:17:00+00:00",
+                "DeliveryAttempts": "10275",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T13:02:00+00:00",
+                "DeliveryAttempts": "12002",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T16:32:00+00:00",
+                "DeliveryAttempts": "4655",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-22T12:17:00+00:00",
+                "DeliveryAttempts": "10305",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T18:47:00+00:00",
+                "DeliveryAttempts": "156",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-22T13:02:00+00:00",
+                "DeliveryAttempts": "10977",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T20:32:00+00:00",
+                "DeliveryAttempts": "7617",
+                "Bounces": "1",
+                "Complaints": "15",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-24T00:02:00+00:00",
+                "DeliveryAttempts": "3",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T19:32:00+00:00",
+                "DeliveryAttempts": "5388",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T15:17:00+00:00",
+                "DeliveryAttempts": "2068",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T16:17:00+00:00",
+                "DeliveryAttempts": "9324",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T12:47:00+00:00",
+                "DeliveryAttempts": "12085",
+                "Bounces": "0",
+                "Complaints": "174",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T11:47:00+00:00",
+                "DeliveryAttempts": "11126",
+                "Bounces": "3",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T12:32:00+00:00",
+                "DeliveryAttempts": "7494",
+                "Bounces": "3",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T10:47:00+00:00",
+                "DeliveryAttempts": "4",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T17:47:00+00:00",
+                "DeliveryAttempts": "4975",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T22:32:00+00:00",
+                "DeliveryAttempts": "11930",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T20:17:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T22:02:00+00:00",
+                "DeliveryAttempts": "8526",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T15:32:00+00:00",
+                "DeliveryAttempts": "4948",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T12:47:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T18:47:00+00:00",
+                "DeliveryAttempts": "12607",
+                "Bounces": "0",
+                "Complaints": "127",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T11:47:00+00:00",
+                "DeliveryAttempts": "13304",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T13:32:00+00:00",
+                "DeliveryAttempts": "3851",
+                "Bounces": "0",
+                "Complaints": "59",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T10:32:00+00:00",
+                "DeliveryAttempts": "9990",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T17:32:00+00:00",
+                "DeliveryAttempts": "13089",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T15:47:00+00:00",
+                "DeliveryAttempts": "6780",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T17:02:00+00:00",
+                "DeliveryAttempts": "12",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T23:32:00+00:00",
+                "DeliveryAttempts": "9785",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T21:47:00+00:00",
+                "DeliveryAttempts": "3",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T12:17:00+00:00",
+                "DeliveryAttempts": "9574",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T22:17:00+00:00",
+                "DeliveryAttempts": "5118",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T00:02:00+00:00",
+                "DeliveryAttempts": "1250",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-22T12:32:00+00:00",
+                "DeliveryAttempts": "13164",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T20:47:00+00:00",
+                "DeliveryAttempts": "2403",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T17:17:00+00:00",
+                "DeliveryAttempts": "8274",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T00:17:00+00:00",
+                "DeliveryAttempts": "13240",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T12:02:00+00:00",
+                "DeliveryAttempts": "13462",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T10:17:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T16:02:00+00:00",
+                "DeliveryAttempts": "7146",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T15:02:00+00:00",
+                "DeliveryAttempts": "36",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T13:17:00+00:00",
+                "DeliveryAttempts": "9019",
+                "Bounces": "0",
+                "Complaints": "140",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T12:47:00+00:00",
+                "DeliveryAttempts": "6637",
+                "Bounces": "0",
+                "Complaints": "7",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T15:47:00+00:00",
+                "DeliveryAttempts": "11104",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T14:47:00+00:00",
+                "DeliveryAttempts": "3344",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T17:02:00+00:00",
+                "DeliveryAttempts": "8913",
+                "Bounces": "0",
+                "Complaints": "85",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T16:32:00+00:00",
+                "DeliveryAttempts": "9480",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T13:32:00+00:00",
+                "DeliveryAttempts": "4059",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T11:47:00+00:00",
+                "DeliveryAttempts": "9",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T15:32:00+00:00",
+                "DeliveryAttempts": "11798",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T16:47:00+00:00",
+                "DeliveryAttempts": "153",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T17:47:00+00:00",
+                "DeliveryAttempts": "1185",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T18:32:00+00:00",
+                "DeliveryAttempts": "6061",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T17:17:00+00:00",
+                "DeliveryAttempts": "10091",
+                "Bounces": "0",
+                "Complaints": "45",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T17:32:00+00:00",
+                "DeliveryAttempts": "2274",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T10:32:00+00:00",
+                "DeliveryAttempts": "11109",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T16:17:00+00:00",
+                "DeliveryAttempts": "7545",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T17:02:00+00:00",
+                "DeliveryAttempts": "7158",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T18:02:00+00:00",
+                "DeliveryAttempts": "261",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T19:17:00+00:00",
+                "DeliveryAttempts": "13269",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T11:17:00+00:00",
+                "DeliveryAttempts": "13465",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T14:17:00+00:00",
+                "DeliveryAttempts": "9015",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T23:17:00+00:00",
+                "DeliveryAttempts": "4826",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T16:17:00+00:00",
+                "DeliveryAttempts": "11820",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T13:17:00+00:00",
+                "DeliveryAttempts": "9748",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T11:32:00+00:00",
+                "DeliveryAttempts": "6794",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T16:47:00+00:00",
+                "DeliveryAttempts": "12276",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T15:02:00+00:00",
+                "DeliveryAttempts": "13300",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T15:17:00+00:00",
+                "DeliveryAttempts": "8358",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T13:32:00+00:00",
+                "DeliveryAttempts": "3333",
+                "Bounces": "0",
+                "Complaints": "20",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T17:02:00+00:00",
+                "DeliveryAttempts": "12036",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T23:32:00+00:00",
+                "DeliveryAttempts": "4463",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T12:32:00+00:00",
+                "DeliveryAttempts": "4964",
+                "Bounces": "0",
+                "Complaints": "28",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T14:17:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T16:32:00+00:00",
+                "DeliveryAttempts": "11093",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T11:17:00+00:00",
+                "DeliveryAttempts": "13464",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T13:02:00+00:00",
+                "DeliveryAttempts": "2775",
+                "Bounces": "0",
+                "Complaints": "1",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T16:02:00+00:00",
+                "DeliveryAttempts": "10266",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T17:47:00+00:00",
+                "DeliveryAttempts": "10",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T22:32:00+00:00",
+                "DeliveryAttempts": "10698",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T20:47:00+00:00",
+                "DeliveryAttempts": "10725",
+                "Bounces": "0",
+                "Complaints": "29",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T18:02:00+00:00",
+                "DeliveryAttempts": "11844",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T19:47:00+00:00",
+                "DeliveryAttempts": "11929",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T18:17:00+00:00",
+                "DeliveryAttempts": "12028",
+                "Bounces": "0",
+                "Complaints": "72",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T14:47:00+00:00",
+                "DeliveryAttempts": "24",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T15:17:00+00:00",
+                "DeliveryAttempts": "33",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T11:47:00+00:00",
+                "DeliveryAttempts": "13431",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T13:47:00+00:00",
+                "DeliveryAttempts": "1880",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T16:47:00+00:00",
+                "DeliveryAttempts": "13108",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T23:47:00+00:00",
+                "DeliveryAttempts": "11802",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T17:17:00+00:00",
+                "DeliveryAttempts": "7650",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T20:17:00+00:00",
+                "DeliveryAttempts": "3",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T16:47:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T15:32:00+00:00",
+                "DeliveryAttempts": "7788",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T12:02:00+00:00",
+                "DeliveryAttempts": "5211",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T17:32:00+00:00",
+                "DeliveryAttempts": "11712",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T15:47:00+00:00",
+                "DeliveryAttempts": "9",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T11:02:00+00:00",
+                "DeliveryAttempts": "1204",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T17:32:00+00:00",
+                "DeliveryAttempts": "8712",
+                "Bounces": "0",
+                "Complaints": "168",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T21:02:00+00:00",
+                "DeliveryAttempts": "13143",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T12:32:00+00:00",
+                "DeliveryAttempts": "6",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T21:17:00+00:00",
+                "DeliveryAttempts": "10548",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T16:02:00+00:00",
+                "DeliveryAttempts": "10266",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T13:02:00+00:00",
+                "DeliveryAttempts": "7953",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T16:32:00+00:00",
+                "DeliveryAttempts": "6990",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T16:02:00+00:00",
+                "DeliveryAttempts": "10162",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T17:17:00+00:00",
+                "DeliveryAttempts": "6516",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T16:17:00+00:00",
+                "DeliveryAttempts": "13143",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T11:02:00+00:00",
+                "DeliveryAttempts": "13110",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T18:02:00+00:00",
+                "DeliveryAttempts": "3057",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T17:02:00+00:00",
+                "DeliveryAttempts": "4542",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T15:17:00+00:00",
+                "DeliveryAttempts": "6723",
+                "Bounces": "0",
+                "Complaints": "31",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T12:17:00+00:00",
+                "DeliveryAttempts": "10388",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T14:02:00+00:00",
+                "DeliveryAttempts": "9807",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T15:47:00+00:00",
+                "DeliveryAttempts": "8193",
+                "Bounces": "2",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T17:32:00+00:00",
+                "DeliveryAttempts": "5055",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T19:02:00+00:00",
+                "DeliveryAttempts": "6098",
+                "Bounces": "0",
+                "Complaints": "6",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T17:17:00+00:00",
+                "DeliveryAttempts": "13308",
+                "Bounces": "0",
+                "Complaints": "192",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T15:32:00+00:00",
+                "DeliveryAttempts": "30",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T13:47:00+00:00",
+                "DeliveryAttempts": "11268",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T10:47:00+00:00",
+                "DeliveryAttempts": "13361",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T17:47:00+00:00",
+                "DeliveryAttempts": "12981",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T18:32:00+00:00",
+                "DeliveryAttempts": "7209",
+                "Bounces": "0",
+                "Complaints": "51",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T16:47:00+00:00",
+                "DeliveryAttempts": "10779",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T11:32:00+00:00",
+                "DeliveryAttempts": "2855",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T12:17:00+00:00",
+                "DeliveryAttempts": "11757",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T13:17:00+00:00",
+                "DeliveryAttempts": "7450",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T16:17:00+00:00",
+                "DeliveryAttempts": "9898",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T23:17:00+00:00",
+                "DeliveryAttempts": "1086",
+                "Bounces": "0",
+                "Complaints": "12",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T11:17:00+00:00",
+                "DeliveryAttempts": "11330",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T20:32:00+00:00",
+                "DeliveryAttempts": "3",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-17T13:02:00+00:00",
+                "DeliveryAttempts": "11202",
+                "Bounces": "0",
+                "Complaints": "182",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T17:02:00+00:00",
+                "DeliveryAttempts": "27",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-19T00:02:00+00:00",
+                "DeliveryAttempts": "11094",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-23T22:17:00+00:00",
+                "DeliveryAttempts": "13335",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T12:02:00+00:00",
+                "DeliveryAttempts": "5244",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T22:02:00+00:00",
+                "DeliveryAttempts": "4",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-21T21:17:00+00:00",
+                "DeliveryAttempts": "1503",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-22T12:02:00+00:00",
+                "DeliveryAttempts": "2007",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T15:47:00+00:00",
+                "DeliveryAttempts": "10268",
+                "Bounces": "1",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T12:47:00+00:00",
+                "DeliveryAttempts": "669",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-15T13:32:00+00:00",
+                "DeliveryAttempts": "10838",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-22T12:47:00+00:00",
+                "DeliveryAttempts": "11569",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T10:47:00+00:00",
+                "DeliveryAttempts": "13411",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-18T17:47:00+00:00",
+                "DeliveryAttempts": "7579",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T23:32:00+00:00",
+                "DeliveryAttempts": "12223",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            },
+            {
+                "Timestamp": "2022-12-14T16:32:00+00:00",
+                "DeliveryAttempts": "5874",
+                "Bounces": "0",
+                "Complaints": "0",
+                "Rejects": "0"
+            }
+        ],
+        "getSendQuota": {
+            "Max24HourSend": 340400,
+            "MaxSendRate": 18,
+            "SentLast24Hours": 0,
+            "@metadata": {
+                "statusCode": 200,
+                "effectiveUri": "https://email.us-west-2.amazonaws.com",
+                "headers": {
+                    "date": "Wed, 28 Dec 2022 15:32:18 GMT",
+                    "content-type": "text/xml",
+                    "content-length": "373",
+                    "connection": "keep-alive",
+                    "x-amzn-requestid": "3c253d25-6fab-453e-88e8-4d03949d0a57"
+                },
+                "transferStats": {
+                    "http": [
+                        []
+                    ]
+                }
+            }
+        }
+    },
+    "message": "details got successfully",
+    "error": null
+}

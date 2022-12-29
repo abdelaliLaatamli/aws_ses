@@ -31,7 +31,7 @@ class GlobalSheet extends Component {
      
 
 
-    getKeys = _ => Object.keys( this.props.quete[0] ).filter( e  => e != "Timestamp" ) 
+    getKeys = _ => Object.keys( this.props.quete[0] || [] ).filter( e  => e != "Timestamp" ) 
     groupBy = _ =>  this.props.quete.groupBy( elm => elm.Timestamp.toLocaleDateString())
     getFiltredData = _ => this.props.filterByDate == "all" ? this.props.quete  : this.groupBy()[this.props.filterByDate];
     
@@ -83,7 +83,7 @@ class GlobalSheet extends Component {
 
       const optionsPercent = JSON.parse( JSON.stringify(options) )
       optionsPercent["scales"] = { yAxes: [  { ticks: { beginAtZero: true,  callback: value => value + "%" }}] } ;
-
+      // console.log( this.getFiltredData() )
      const data = {
 
         labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
@@ -100,23 +100,23 @@ class GlobalSheet extends Component {
       };
 
 
-      const dataPercent = {
+      // const dataPercent = {
 
-        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
-        datasets: [
+      //   labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
+      //   datasets: [
 
-          ...this.getKeys().map( ( cat , k ) => ({ 
-            label: cat +" "+ this.props.filterByDate ,
-            data:  this.getFiltredData().map( elm => { 
-                let percent = ( parseInt( elm[cat] )  / this.props.maxSend ) * 100;
-                return parseFloat( percent.toFixed(2) );
-            }) ,
-            borderColor: this.getBorderColor(k), 
-            backgroundColor: this.getBackgroundColor(k),
-          }) )
+      //     ...this.getKeys().map( ( cat , k ) => ({ 
+      //       label: cat +" "+ this.props.filterByDate ,
+      //       data:  this.getFiltredData().map( elm => { 
+      //           let percent = ( parseInt( elm[cat] )  / this.props.maxSend ) * 100;
+      //           return parseFloat( percent.toFixed(2) );
+      //       }) ,
+      //       borderColor: this.getBorderColor(k), 
+      //       backgroundColor: this.getBackgroundColor(k),
+      //     }) )
 
-        ],
-      };
+      //   ],
+      // };
 
 
       return ( <React.Fragment>
@@ -129,9 +129,9 @@ class GlobalSheet extends Component {
 
                   <div className="row pt-3"> 
                       <div className="col-md-4 offset-4"> 
-                          <select onChange={ this.filterByDate } ref={this.myRef} class="form-select form-select-sm" required aria-label="Default select example">
-                                <option selected value="all">Open this select menu</option>
-                                { Object.keys(this.groupBy()).map( ( day ) => <option value={day}>{day}</option> ) }
+                          <select onChange={ this.filterByDate } ref={this.myRef} className="form-select form-select-sm" required aria-label="Default select example">
+                                <option defaultValue={"all"} value="all">Open this select menu</option>
+                                { Object.keys(this.groupBy()).map( ( day , k ) => <option value={day} key={k}>{day}</option> ) }
                           </select>
                       </div>
                   </div> 
@@ -145,7 +145,7 @@ class GlobalSheet extends Component {
                                 <p> DeliveryAttempts : {this.props.quete.DeliveryAttempts}</p>
                                 <p> Rejects : {this.props.quete.Rejects}</p>
                                 <p> Timestamp : {this.props.quete.Timestamp}</p> */}
-                          <Line options={optionsPercent} data={dataPercent}/>
+                          {/* <Line options={optionsPercent} data={dataPercent}/> */}
                       </div>
                       <div className="col-md-6">   
                           <Line options={options} data={data}/>

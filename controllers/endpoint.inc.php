@@ -4,7 +4,10 @@
 header('Content-Type: application/json');
 
 require __PWDROOT__."/services/AccountService.php";
-require __PWDROOT__."/services/AwsSesService.php";
+require __PWDROOT__."/services/AwsService.php";
+require __PWDROOT__."/repositories/AuditManagerRepository.php";
+require __PWDROOT__."/repositories/AwsSesRepository.php";
+require __PWDROOT__."/repositories/CloudWatchRepository.php";
 
 if (!empty($_POST) && isset($_POST["request"])) {
 
@@ -21,11 +24,11 @@ if (!empty($_POST) && isset($_POST["request"])) {
                 $accountService = new AccountService( $configurations["db"] );
                 $account = $accountService->getAccount( $account_id );
 
-                $awsSesService = new AwsSesService( $account , $region );
+                $awsService = new AwsService( $account , $region );
 
                 $response = [ 
                     "status"  => true ,
-                    "data"    =>  $awsSesService->getSesDetails() ,
+                    "data"    =>  $awsService->getAccountStatistiques() ,
                     // "data"    =>  $awsSesService->getSesDetailsMock() ,
                     "message" => "details got successfully" ,
                     "error"   => null

@@ -121,9 +121,9 @@ class Sheet extends Component {
 
                   <div className="row pt-3"> 
                       <div className="col-md-4 offset-4"> 
-                        <select onChange={ this.filterByDate } ref={this.myRef} class="form-select form-select-sm" required aria-label="Default select example">
-                                <option selected value="all">Open this select menu</option>
-                                    { Object.keys(this.groupBy()).map( ( day ) => <option value={day}>{day}</option> ) }
+                        <select onChange={ this.filterByDate } ref={this.myRef} className="form-select form-select-sm" required aria-label="Default select example">
+                                <option defaultValue={"all"} value="all">Open this select menu</option>
+                                    { Object.keys(this.groupBy()).map( ( day , k ) => <option value={day} key={k}>{day}</option> ) }
                             </select>  
                       </div>
                   </div> 

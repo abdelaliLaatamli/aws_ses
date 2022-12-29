@@ -1,0 +1,41 @@
+<?php 
+
+// require __DIR__ ."/bootstrap/bootstrap.inc.php";
+
+
+
+// echo json_encode( $data );
+
+
+// require '/path/to/vendor/autoload.php';
+require __DIR__. './../vendor/autoload.php';
+
+
+$key="AKIAUKYLDSYEP2HS53YR";
+$secret="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";
+$proxy = "vwc6y:mouazpwi@31.204.31.241:5432";
+
+use Aws\CloudWatch\CloudWatchClient; 
+use Aws\Exception\AwsException;
+use Aws\Credentials\Credentials;
+
+
+$credentials  = new Credentials( $key , $secret );
+
+$authFactory = [
+    'region'      => 'us-west-2',
+    'version'     => '2010-08-01',
+    'credentials' => $credentials ,
+    "http"        => [ 'proxy' => $proxy ]
+];
+
+
+$cloudWatchClient = new CloudWatchClient( $authFactory );
+
+try {
+    $result = $cloudWatchClient->listMetrics();
+    file_put_contents( "aa" , json_encode( $result->toArray() ) );
+    var_dump( $result );
+} catch (AwsException $e) {
+    return 'Error: ' . $e->getAwsErrorMessage();
+}

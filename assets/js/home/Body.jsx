@@ -41,7 +41,7 @@ class Body extends Component {
 
         if( response.status == true ){
             toastr.notice({ title:  response.message  , message: response.message , duration : 7000 });
-            // console.log( response.data )
+            //console.log( response.data )
             this.setState({ details : response.data })
         }else{
             toastr.error( { title:  response.message  , message: response.error , duration : 7000 });

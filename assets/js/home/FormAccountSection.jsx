@@ -60,29 +60,29 @@ class FormAccountSection extends Component {
             <div className="row col-auto" >
 
                 <div className="col-auto">
-                    <label for="staticEmail2" className="col-form-label">Account</label>
+                    <label htmlFor="staticEmail2" className="col-form-label">Account</label>
                 </div>
                 <div className="col-auto">
 
-                    <select class="form-select form-select-sm" required name="account_id" aria-label="Default select example">
-                        <option selected value="">Open this select menu</option>
-                        { this.state.accounts.map( accounts => <option value={accounts.id}>{accounts.name}</option> ) }
+                    <select className="form-select form-select-sm" required name="account_id" aria-label="Default select example">
+                        <option defaultValue="">Open this select menu</option>
+                        { this.state.accounts.map( account  => <option value={account.id} key={account.id}>{account.name}</option> ) }
                     </select>
                 </div>
 
             </div>
 
-            <div class="row col-auto">
+            <div className="row col-auto">
 
                 <div className="col-auto">
-                    <label for="access_key" className="col-form-label">Region</label>
+                    <label htmlFor="access_key" className="col-form-label">Region</label>
                 </div>
                 <div className="col-auto">
-                    <select class="form-select form-select-sm" required name="region" aria-label="Default select example">
-                        <option selected value="">Open this select menu</option>
+                    <select className="form-select form-select-sm" required name="region" aria-label="Default select example">
+                        <option defaultValue="">Open this select menu</option>
                         { Object.keys(this.state.regions).map( 
-                                region => <option 
-                                    value={region}>{ this.state.regions[region] }</option> ) }
+                                region => <option  
+                                    value={region} key={region}>{ this.state.regions[region] }</option> ) }
                     </select>
 
                 </div>

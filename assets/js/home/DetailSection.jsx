@@ -17,11 +17,11 @@ class DetailSection extends Component {
 
     componentDidUpdate(prevProps) {
         
-        if(  Object.keys( this.props.details ).length == 0 ){
+        if(  Object.keys( this.props.details.ses ).length == 0 ){
             this.setState({sheet:'Global'})
         }else{
          
-            if( this.state.sheet == 0 && this.props.details.getSendStatistics.length > 0 ){
+            if( this.state.sheet == 0 && this.props.details.ses.getSendStatistics.length > 0 ){
                 this.setState({sheet:'Global'})
             }
   
@@ -37,18 +37,21 @@ class DetailSection extends Component {
         const checkClass=(param , current) => {
             let className = "nav-link" ;
             let toAdd =  ( param == current ) ? " active " : "";
-            return className + toAdd ;
+            let p = Object.keys(this.props.details).length == 0 ? " disabled " : ""; 
+            return className + toAdd + p ;
         } 
 
 
         const getSendDataPoints = _ => {
-            const getSendStatistics = this.props.details.getSendStatistics || [];
+            let getSendStatistics = this.props.details.ses || undefined;
+            getSendStatistics = getSendStatistics ? getSendStatistics.getSendStatistics : [];
             return getSendStatistics;
         }
 
         const getSendQuota = _ => {
-            const getSendQuota = this.props.details.getSendQuota || undefined;
-            const SendDataPoints = getSendQuota || {}
+           
+            let getSendQuota = this.props.details.ses || undefined;
+            const SendDataPoints = getSendQuota ? getSendQuota.getSendQuota : {};
             return SendDataPoints;
         }
 
@@ -108,7 +111,7 @@ class DetailSection extends Component {
             <ul className="nav nav-tabs">   
                 { 
                     this.state.sheets.map(
-                        ( sheet ) => <li className="nav-item">
+                        ( sheet , k ) => <li key={k} className="nav-item" >
                             <button 
                                 className={ checkClass( sheet , this.state.sheet)} 
                                 onClick={ () => this.setState({sheet : sheet }) }> {sheet}
@@ -118,7 +121,7 @@ class DetailSection extends Component {
                 }
 
             </ul>
-
+    
             {
                 {
                     "Nodata"           : <div>No Data available</div>,
@@ -144,8 +147,9 @@ class DetailSection extends Component {
                                             quete={ filterData("Rejects") } maxSend={getSendQuota().Max24HourSend}
                                             onFilterByDateChange={ this.filterChange }
                                             />  
-                }[ this.state.sheet ]
+                }[ getSendDataPoints().length > 0 ? this.state.sheet : "Nodata" ]
             }
+
 
         </div>)
     }
