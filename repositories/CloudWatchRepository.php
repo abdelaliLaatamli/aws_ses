@@ -50,12 +50,14 @@ class CloudWatchRepository {
         // ];
 
         return [    
-            "complaintRate" => $this->getMetricStatisticsbyType( "Reputation.ComplaintRate" ) ,
-            "delivery" => $this->getMetricStatisticsbyType( "Delivery" ) ,
-            "send" => $this->getMetricStatisticsbyType( "Send" ) ,
-            "bounce" => $this->getMetricStatisticsbyType( "Bounce" ) ,
-            "complaint" => $this->getMetricStatisticsbyType( "Complaint" ) ,
-            "Reputation.BounceRate" => $this->getMetricStatisticsbyType( "Reputation.BounceRate" ) 
+            "Complaints"        => $this->getMetricStatisticsbyType( "Reputation.ComplaintRate" ) ,
+            "DeliveryAttempts"  => $this->getMetricStatisticsbyType( "Delivery" ) ,
+            "Rejects"           => [] ,
+
+            // "send"              => $this->getMetricStatisticsbyType( "Send" ) ,
+            // "bounce" => $this->getMetricStatisticsbyType( "Bounce" ) ,
+            // "complaint" => $this->getMetricStatisticsbyType( "Complaint" ) ,
+            "Bounces" => $this->getMetricStatisticsbyType( "Reputation.BounceRate" ) 
         ];
         // return 
 

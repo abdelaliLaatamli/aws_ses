@@ -95,21 +95,21 @@ class Sheet extends Component {
       };
 
 
-      const dataPercent = {
+      // const dataPercent = {
 
-        labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
-        datasets: [
-          {
-            label: this.props.keySheet +" "+ this.props.filterByDate ,
-            data:  this.getFiltredData().map( elm =>  {
-              let percent = (parseInt( elm[this.props.keySheet] ) / this.props.maxSend ) * 100;
-              return parseFloat( percent.toFixed(2) );
-            }) ,
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)'
-          }
-        ],
-      };
+      //   labels :  this.getFiltredData().map( elm => this.props.filterByDate == "all" ? elm.Timestamp.toLocaleString() : elm.Timestamp.toLocaleTimeString() ),
+      //   datasets: [
+      //     {
+      //       label: this.props.keySheet +" "+ this.props.filterByDate ,
+      //       data:  this.getFiltredData().map( elm =>  {
+      //         let percent = (parseInt( elm[this.props.keySheet] ) / this.props.maxSend ) * 100;
+      //         return parseFloat( percent.toFixed(2) );
+      //       }) ,
+      //       borderColor: 'rgb(255, 99, 132)',
+      //       backgroundColor: 'rgba(255, 99, 132, 0.5)'
+      //     }
+      //   ],
+      // };
       
   
       return ( <React.Fragment>
@@ -130,7 +130,7 @@ class Sheet extends Component {
                   <div className="row pt-3">
                         <div className="col-md-6">
                                 
-                            <Line options={optionsPercent} data={dataPercent}/>
+                            {/* <Line options={optionsPercent} data={dataPercent}/> */}
                                   {/* <p> data For Sheet {this.props.keySheet}</p>
                                   <p> Bounces : {this.props.quete.Bounces}</p>
                                   <p> Complaints :  {this.props.quete.Complaints}</p>

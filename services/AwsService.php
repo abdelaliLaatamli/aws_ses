@@ -19,6 +19,8 @@ class AwsService {
 
     public function getAccountStatistiques(){
 
+        return $this->responseMock();
+
         $account_health = new AuditManagerRepository( $this->account , $this->region );
         $account_watch  = new CloudWatchRepository( $this->account , $this->region );
         $account_ses    = new AwsSesRepository( $this->account , $this->region );
@@ -30,6 +32,12 @@ class AwsService {
             "ses"    => $account_ses->getSesDetails()
         ];
 
+    }
+
+    private function responseMock(){
+        $content = file_get_contents( __DIR__ ."/../mock/response_back.json" );
+        $content = json_decode( $content );
+        return $content;
     }
     
 }

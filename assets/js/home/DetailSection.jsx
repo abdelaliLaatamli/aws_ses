@@ -48,6 +48,12 @@ class DetailSection extends Component {
             return getSendStatistics;
         }
 
+        const getWatch = criterias => {
+            let getSendStatistics = this.props.details.watch || undefined;
+            return getSendStatistics ? getSendStatistics[criterias] : [];
+            // return getSendStatistics;
+        }
+
         const getSendQuota = _ => {
            
             let getSendQuota = this.props.details.ses || undefined;
@@ -57,11 +63,22 @@ class DetailSection extends Component {
 
         const filterData = criterias => getSendDataPoints()
                 .map( sheet => { 
-
                     let data= {}; 
                     criterias.split(',').forEach(criteria => { data[criteria] = sheet[criteria];  });
                     return {...data , Timestamp : new Date( sheet.Timestamp ) } })  
                 .sort((a, b) => a.Timestamp - b.Timestamp)
+
+        
+        const filterDataWatch = criterias => getWatch(criterias)
+                .map( sheet => ({ "Average" : sheet["Average"] , Timestamp : new Date( sheet.Timestamp ) } ))
+                .sort((a, b) => a.Timestamp - b.Timestamp)
+
+        // const filterWatch = criterias
+        // console.log(getWatchData("Complaints"))
+        // console.log( getWatch("Complaints") )
+        // console.log( filterDataWatch("Complaints") )
+
+        // const filterWatch = criterias
 
          
         return (<div className="pt-4">
@@ -128,7 +145,8 @@ class DetailSection extends Component {
                     "Global"           : <GlobalSheet 
                                             keySheet={"Global"} filterByDate={this.state.filterByDate} 
                                             quete={ filterData("Bounces,Complaints,DeliveryAttempts,Rejects") } 
-                                            maxSend={getSendQuota().Max24HourSend}
+                                            maxSend={getSendQuota().Max24HourSend} 
+                                            
                                             onFilterByDateChange={ this.filterChange }/> ,
                     "Bounces"          : <Sheet 
                                             keySheet={"Bounces"} filterByDate={this.state.filterByDate} 
