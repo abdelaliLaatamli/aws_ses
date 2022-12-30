@@ -51,7 +51,8 @@ class CloudWatchRepository {
 
         return [    
             "Complaints"        => $this->getMetricStatisticsbyType( "Reputation.ComplaintRate" ) ,
-            "DeliveryAttempts"  => $this->getMetricStatisticsbyType( "Delivery" ) ,
+            // "DeliveryAttempts"  => $this->getMetricStatisticsbyType( "Delivery" ) ,
+            "DeliveryAttempts"  => [] ,
             "Rejects"           => [] ,
 
             // "send"              => $this->getMetricStatisticsbyType( "Send" ) ,
@@ -70,7 +71,8 @@ class CloudWatchRepository {
             'Namespace'  => "AWS/SES" ,
             'MetricName' => $type ,
             'EndTime'    => strtotime('now'),
-            'StartTime'  => strtotime('-15 days'),
+            // 'StartTime'  => strtotime('-15 days'),
+            'StartTime'  => strtotime('-10 days'),
             'Period'     => 3600,
             'Statistics' => array('Average'),
         ]);

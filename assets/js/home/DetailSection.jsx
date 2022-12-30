@@ -70,13 +70,14 @@ class DetailSection extends Component {
 
         
         const filterDataWatch = criterias => getWatch(criterias)
-                .map( sheet => ({ "Average" : sheet["Average"] , Timestamp : new Date( sheet.Timestamp ) } ))
+                .map( sheet => ({ "Average" : sheet["Average"] * 100 , Timestamp : new Date( sheet.Timestamp ) } ))
                 .sort((a, b) => a.Timestamp - b.Timestamp)
 
         // const filterWatch = criterias
         // console.log(getWatchData("Complaints"))
         // console.log( getWatch("Complaints") )
         // console.log( filterDataWatch("Complaints") )
+        // console.log( filterDataWatch("Bounces") )
 
         // const filterWatch = criterias
 
@@ -151,11 +152,11 @@ class DetailSection extends Component {
                     "Bounces"          : <Sheet 
                                             keySheet={"Bounces"} filterByDate={this.state.filterByDate} 
                                             quete={  filterData("Bounces")  } maxSend={getSendQuota().Max24HourSend}
-                                            onFilterByDateChange={ this.filterChange } /> , 
+                                            onFilterByDateChange={ this.filterChange } graph={filterDataWatch("Bounces")} /> , 
                     "Complaints"       : <Sheet 
                                             keySheet={"Complaints"} filterByDate={this.state.filterByDate} 
                                             quete={ filterData("Complaints") } maxSend={getSendQuota().Max24HourSend}
-                                            onFilterByDateChange={ this.filterChange } /> , 
+                                            onFilterByDateChange={ this.filterChange } graph={filterDataWatch("Complaints")} /> , 
                     "DeliveryAttempts" : <Sheet 
                                             keySheet={"DeliveryAttempts"} filterByDate={this.state.filterByDate} 
                                             quete={ filterData("DeliveryAttempts") } maxSend={getSendQuota().Max24HourSend}

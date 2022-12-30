@@ -146,6 +146,7 @@ class GlobalSheet extends Component {
                                 <p> Rejects : {this.props.quete.Rejects}</p>
                                 <p> Timestamp : {this.props.quete.Timestamp}</p> */}
                           {/* <Line options={optionsPercent} data={dataPercent}/> */}
+                         
                       </div>
                       <div className="col-md-6">   
                           <Line options={options} data={data}/>

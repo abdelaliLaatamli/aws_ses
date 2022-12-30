@@ -810,7 +810,258 @@
                 "Unit": "None"
             }
         ],
-        "DeliveryAttempts": [],
+        "DeliveryAttempts": [
+            {
+                "Timestamp": "2022-12-15T17:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T00:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T10:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T15:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T14:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T21:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T13:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T17:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-23T23:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T12:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T18:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T14:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T10:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T17:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T13:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T14:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T16:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T23:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T10:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T17:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T16:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T18:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-22T13:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-23T22:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-23T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T12:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-14T23:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-23T21:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-22T12:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T16:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T18:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T13:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T20:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T12:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T16:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T15:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T17:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-14T22:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-23T20:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T16:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T15:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-22T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-17T13:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-18T12:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-15T15:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-21T19:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            },
+            {
+                "Timestamp": "2022-12-19T11:13:00+00:00",
+                "Average": 1,
+                "Unit": "Count"
+            }
+        ],
         "Rejects": [],
         "Bounces": [
             {

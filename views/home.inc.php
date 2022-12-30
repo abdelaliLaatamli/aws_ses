@@ -47,6 +47,8 @@
     <script type="text/babel" src="./assets/js/home/DetailSection.jsx"></script>
     <script type="text/babel" src="./assets/js/home/Sheet.jsx"></script>
     <script type="text/babel" src="./assets/js/home/GlobalSheet.jsx"></script>
+    <script type="text/babel" src="./assets/js/home/GrapthSheet.jsx"></script>
+    <script type="text/babel" src="./assets/js/home/GrapthSheet2.jsx"></script>
     
     
     
