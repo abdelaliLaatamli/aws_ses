@@ -48,18 +48,22 @@ class CloudWatchRepository {
         // return [    
         //     "complaintRate" => $this->getMetricStatisticsMock() , 
         // ];
-
-        return [    
-            "Complaints"        => $this->getMetricStatisticsbyType( "Reputation.ComplaintRate" ) ,
-            // "DeliveryAttempts"  => $this->getMetricStatisticsbyType( "Delivery" ) ,
-            "DeliveryAttempts"  => [] ,
-            "Rejects"           => [] ,
-
-            // "send"              => $this->getMetricStatisticsbyType( "Send" ) ,
-            // "bounce" => $this->getMetricStatisticsbyType( "Bounce" ) ,
-            // "complaint" => $this->getMetricStatisticsbyType( "Complaint" ) ,
-            "Bounces" => $this->getMetricStatisticsbyType( "Reputation.BounceRate" ) 
-        ];
+        try{
+            return [    
+                "Complaints"        => $this->getMetricStatisticsbyType( "Reputation.ComplaintRate" ) ,
+                "DeliveryAttempts"  => [] ,
+                "Rejects"           => [] ,
+                "Bounces"           => $this->getMetricStatisticsbyType( "Reputation.BounceRate" ) 
+            ];
+        }catch( Exception $e ){
+            return [    
+                "Complaints"        => [] ,
+                "DeliveryAttempts"  => [] ,
+                "Rejects"           => [] ,
+                "Bounces"           => [] 
+            ];
+        }
+       
         // return 
 
     }

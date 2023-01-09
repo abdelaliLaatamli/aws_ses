@@ -42,7 +42,12 @@ class AuditManagerRepository {
 
     public function getAccountHealth(){
         // https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-auditmanager-2017-07-25.html#getaccountstatus
-        return  [ "status" => $this->auditManagerClient->GetAccountStatus([])->toArray()["status"] ];
+        try{
+            return  [ "status" => $this->auditManagerClient->GetAccountStatus([])->toArray()["status"] ];
+        }catch(Exception $e){
+            return  [ "status" => "error incactive {$e->getMessage()}" ];
+        }
+        
 
     }
 

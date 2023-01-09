@@ -25,8 +25,8 @@ class GrapthSheet extends Component {
 
     componentDidMount() {
         const dates =  Object.keys(this.groupBy());
-        this.myRef.current.value = dates[ dates.length - 1 ] ;
-        this.setState({ selectedDate : dates[ dates.length - 1 ] })
+        this.myRef.current.value = dates.length > 0 ? dates[ dates.length - 1 ] : "all" ;
+        this.setState({ selectedDate : dates.length > 0 ? dates[ dates.length - 1 ] : "all" })
     }
 
     filterByDate = (event) => this.setState({ selectedDate : event.target.value });
@@ -57,8 +57,6 @@ class GrapthSheet extends Component {
         },
       };
 
-    //   const optionsPercent = JSON.parse( JSON.stringify(options) )
-    //   optionsPercent["scales"] = { yAxes: [  { ticks: { beginAtZero: true,  callback: value => value + "%" }}] } ;
 
 
      const data = {
@@ -74,7 +72,7 @@ class GrapthSheet extends Component {
         ],
       };
 
-  
+      console.log(this.getFiltredData())
       return ( <React.Fragment>
     
 
